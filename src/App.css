@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+/* custom */
+.Navi {
+  background-color: navy;
+  width: 100%;
+  color: white;
+  display: flex;
+  padding: 10px;
+
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.menuBar {
+  display: flex;
+}
+
+.menu {
+  margin: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.titleBtn {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.title {
+  font-size: 30px;
+  color: white;
+}
+
+.subTitle {
+  font-size: 25px;
+  color: white;
+}
