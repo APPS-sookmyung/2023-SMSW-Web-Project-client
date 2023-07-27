@@ -1,0 +1,17 @@
+.links {
+  width: 100%;
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.smlinks {
+  width: 100px;
+  margin: 10px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 3;
+  color: white;
+  background-color: midnightblue;
+}
