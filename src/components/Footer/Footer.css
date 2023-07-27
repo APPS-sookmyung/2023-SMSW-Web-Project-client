@@ -1,0 +1,9 @@
+.footer {
+  background-color: gray;
+}
+
+.location {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
