@@ -1,0 +1,12 @@
+.Dropdown {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: blue;
+}
+
+.DropdownMenu {
+  font-size: 17px;
+  text-decoration: none;
+  color: white;
+}
