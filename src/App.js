@@ -39,8 +39,8 @@ function App() {
               setIsDropped(!isDropped);
             }}
           >
-            전공소개
-            {isDropped && <MajorInfoDropdown />}
+            <div>전공소개</div>
+            <div>{isDropped && <MajorInfoDropdown />}</div>
           </ul>
           <ul
             className="menu"
@@ -48,8 +48,8 @@ function App() {
               setIsDropped(!isDropped);
             }}
           >
-            커리큘럼
-            {isDropped && <CurriculumDropdown />}
+            <div>커리큘럼</div>
+            <div>{isDropped && <CurriculumDropdown />}</div>
           </ul>
           <ul
             className="menu"
@@ -57,8 +57,8 @@ function App() {
               setIsDropped(!isDropped);
             }}
           >
-            구성원
-            {isDropped && <MemberDropdown />}
+            <div>구성원</div>
+            <div>{isDropped && <MemberDropdown />}</div>
           </ul>
           <ul
             className="menu"
@@ -66,8 +66,8 @@ function App() {
               setIsDropped(!isDropped);
             }}
           >
-            학생활동
-            {isDropped && <StudentActivityDropdown />}
+            <div>학생활동</div>
+            <div>{isDropped && <StudentActivityDropdown />}</div>
           </ul>
         </div>
       </header>

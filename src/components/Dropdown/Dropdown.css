@@ -3,10 +3,12 @@
   flex-direction: column;
   text-decoration: none;
   background-color: blue;
+  align-items: center;
 }
 
 .DropdownMenu {
-  font-size: 17px;
+  font-size: 1.3vw;
   text-decoration: none;
+  margin-top: 0.2vw;
   color: white;
 }

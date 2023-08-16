@@ -44,7 +44,6 @@
   color: white;
   display: flex;
   padding: 10px;
-
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
@@ -52,11 +51,21 @@
 
 .menuBar {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2vw;
 }
 
 .menu {
-  margin: 20px;
-  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  font-size: 1.7vw;
   text-decoration: none;
   color: white;
 }
