@@ -1,9 +1,9 @@
 .HomeMainImg {
-  background-image: url("../../assets/codingscreen.jpg");
+  background-image: url("../../assets/HomeMainImg.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 70vh;
+  height: 90vh;
   display: flex;
 }
 
@@ -13,21 +13,55 @@
   align-items: center;
   justify-content: flex-end;
   margin-left: 3%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   color: white;
 }
 
-.HomeInfoContainer {
-  margin: 10%;
+.MainIntroPart {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: aquamarine;
+  background-color: #eff5f7;
+  height: 40vh;
+}
+
+.MajorFieldPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+  width: 100vw;
+  height: 80vh;
+}
+
+.CurriculumPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eff5f7;
+
+  width: 100vw;
+  height: 80vh;
+}
+
+.LinksPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+  width: 100vw;
+  height: 80vh;
 }
 
 .MainIntro {
   font-size: 40px;
+  font-weight: bold;
 }
 
 .HomeInfoTitle {

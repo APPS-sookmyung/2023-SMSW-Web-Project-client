@@ -19,14 +19,14 @@ const Home = () => {
         </div>
       </Fragment>
       <Fragment>
-        <div className="HomeInfoContainer">
+        <div className="MainIntroPart">
           <div className="MainIntro">
             " 생각하는 힘을 가진 창조적 인재 양성 "
           </div>
         </div>
       </Fragment>
       <Fragment>
-        <div className="HomeInfoContainer">
+        <div className="MajorFieldPart">
           <div className="HomeInfoTitle">전공분야</div>
           <div className="MajorField">
             <div className="MajorFieldContainer">
@@ -48,7 +48,7 @@ const Home = () => {
         </div>
       </Fragment>
       <Fragment>
-        <div className="HomeInfoContainer">
+        <div className="CurriculumPart">
           <div className="HomeInfoTitle">학년별 커리큘럼</div>
           <div className="Curriculum">
             <Fragment>
@@ -94,7 +94,7 @@ const Home = () => {
           </div>
         </div>
       </Fragment>
-      <div className="HomeInfoContainer">
+      <div className="LinksPart">
         <Links />
       </div>
     </Fragment>

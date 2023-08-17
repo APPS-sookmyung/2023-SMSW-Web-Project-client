@@ -39,11 +39,12 @@
 
 /* custom */
 .Navi {
-  background-color: navy;
+  background-color: black;
   width: 100%;
+  height: 10vh;
   color: white;
   display: flex;
-  padding: 10px;
+  padding-right: 1vw;
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
@@ -51,37 +52,51 @@
 
 .menuBar {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-right: 2vw;
+  width: 80vh;
+  margin-right: 20px;
+  justify-content: space-between;
 }
 
 .menu {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-right: 2vw;
-  margin-left: 2vw;
-  padding-right: 1vw;
-  padding-left: 1vw;
-  font-size: 1.7vw;
+  width: 90px;
+  font-size: 1.5vw;
   text-decoration: none;
   color: white;
+}
+
+.menuDropdownContainer {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  padding-right: 1vw;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-decoration: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.menuDropdown {
+  position: absolute;
 }
 
 .titleBtn {
   display: flex;
   flex-direction: column;
   text-decoration: none;
+  align-items: center;
+  margin: 3vh;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 1.5vw;
   color: white;
 }
 
 .subTitle {
-  font-size: 25px;
+  font-size: 1.3vw;
   color: white;
 }

@@ -1,14 +1,24 @@
 .Dropdown {
   display: flex;
-  flex-direction: column;
   text-decoration: none;
-  background-color: blue;
+  /* background-color: blue; */
+  justify-content: space-between;
+  width: 80vh;
+}
+
+.DropdownContainer {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  width: 90px;
+  margin-top: 8px;
 }
 
 .DropdownMenu {
-  font-size: 1.3vw;
+  font-size: 1vw;
   text-decoration: none;
-  margin-top: 0.2vw;
   color: white;
+  border-radius: 10%;
+  margin: 1px;
 }

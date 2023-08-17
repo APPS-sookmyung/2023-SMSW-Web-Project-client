@@ -6,10 +6,7 @@ import Curriculum from "./pages/Curriculum/Curriculum";
 import MajorInfo from "./pages/MajorInfo/MajorInfo";
 import Member from "./pages/Member/Member";
 import StudentActivity from "./pages/StudentActivity/StudentActivity";
-import CurriculumDropdown from "./components/Dropdown/CurriculumDropdown";
-import MajorInfoDropdown from "./components/Dropdown/MajorInfoDropdown";
-import MemberDropdown from "./components/Dropdown/MemberDropdown";
-import StudentActivityDropdown from "./components/Dropdown/StudentActivityDropdown";
+import Dropdown from "./components/Dropdown/Dropdown";
 import Course from "./pages/Curriculum/Course/Course.js";
 import Home from "./pages/Home/Home";
 import GraduationRequirements from "./pages/Curriculum/GraduationRequirements/GraduationRequirements.js";
@@ -32,45 +29,25 @@ function App() {
           <span className="title">숙명여자대학교</span>
           <span className="subTitle">소프트웨어학부</span>
         </Link>
-        <div className="menuBar">
+        <div>
           <ul
-            className="menu"
             onClick={() => {
               setIsDropped(!isDropped);
             }}
           >
-            <div>전공소개</div>
-            <div>{isDropped && <MajorInfoDropdown />}</div>
-          </ul>
-          <ul
-            className="menu"
-            onClick={() => {
-              setIsDropped(!isDropped);
-            }}
-          >
-            <div>커리큘럼</div>
-            <div>{isDropped && <CurriculumDropdown />}</div>
-          </ul>
-          <ul
-            className="menu"
-            onClick={() => {
-              setIsDropped(!isDropped);
-            }}
-          >
-            <div>구성원</div>
-            <div>{isDropped && <MemberDropdown />}</div>
-          </ul>
-          <ul
-            className="menu"
-            onClick={() => {
-              setIsDropped(!isDropped);
-            }}
-          >
-            <div>학생활동</div>
-            <div>{isDropped && <StudentActivityDropdown />}</div>
+            <div className="menuBar">
+              <div className="menu">전공소개</div>
+              <div className="menu">커리큘럼</div>
+              <div className="menu">구성원</div>
+              <div className="menu">학생활동</div>
+            </div>
+            <div className="menuDropdownContainer">
+              <div className="menuDropdown">{isDropped && <Dropdown />}</div>
+            </div>
           </ul>
         </div>
       </header>
+
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="/Curriculum">
