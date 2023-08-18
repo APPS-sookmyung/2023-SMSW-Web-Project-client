@@ -1,9 +1,13 @@
 .footer {
-  background-color: gray;
+  background-color: black;
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .location {
   color: white;
   display: flex;
   flex-direction: column;
+  margin: 10px;
 }

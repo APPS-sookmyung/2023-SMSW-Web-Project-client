@@ -27,7 +27,12 @@ const Home = () => {
       </Fragment>
       <Fragment>
         <div className="MajorFieldPart">
-          <div className="HomeInfoTitle">전공분야</div>
+          <div
+            className="HomeInfoTitle"
+            style={{ color: "white", marginTop: "25vh" }}
+          >
+            전공분야
+          </div>
           <div className="MajorField">
             <div className="MajorFieldContainer">
               <div className="MajorFieldTitle">Software Core</div>
