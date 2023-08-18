@@ -6,17 +6,6 @@ const Dropdown = () => {
   return (
     <div className="Dropdown">
       <div className="DropdownContainer">
-        <Link
-          className="DropdownMenu"
-          to={"/Curriculum/GraduationRequirements"}
-        >
-          졸업요건
-        </Link>
-        <Link className="DropdownMenu" to={"/Curriculum/Course"}>
-          이수과목
-        </Link>
-      </div>
-      <div className="DropdownContainer">
         <Link className="DropdownMenu" to={"/MajorInfo/Intro"}>
           개요
         </Link>
@@ -28,6 +17,17 @@ const Dropdown = () => {
         </Link>
         <Link className="DropdownMenu" to={"/MajorInfo/LocationContact"}>
           위치 및 연락처
+        </Link>
+      </div>
+      <div className="DropdownContainer">
+        <Link
+          className="DropdownMenu"
+          to={"/Curriculum/GraduationRequirements"}
+        >
+          졸업요건
+        </Link>
+        <Link className="DropdownMenu" to={"/Curriculum/Course"}>
+          이수과목
         </Link>
       </div>
       <div className="DropdownContainer">
