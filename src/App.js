@@ -24,29 +24,31 @@ function App() {
 
   return (
     <Fragment>
-      <header className="Navi">
-        <Link to={"/"} className="titleBtn">
-          <span className="title">숙명여자대학교</span>
-          <span className="subTitle">소프트웨어학부</span>
-        </Link>
-        <div>
-          <ul
-            onClick={() => {
-              setIsDropped(!isDropped);
-            }}
-          >
-            <div className="menuBar">
-              <div className="menu">전공소개</div>
-              <div className="menu">커리큘럼</div>
-              <div className="menu">구성원</div>
-              <div className="menu">학생활동</div>
-            </div>
-            <div className="menuDropdownContainer">
-              <div className="menuDropdown">{isDropped && <Dropdown />}</div>
-            </div>
-          </ul>
-        </div>
-      </header>
+      <Fragment>
+        <header className="Navi">
+          <Link to={"/"} className="titleBtn">
+            <span className="title">숙명여자대학교</span>
+            <span className="subTitle">소프트웨어학부</span>
+          </Link>
+          <div>
+            <ul
+              onClick={() => {
+                setIsDropped(!isDropped);
+              }}
+            >
+              <div className="menuBar">
+                <div className="menu">전공소개</div>
+                <div className="menu">커리큘럼</div>
+                <div className="menu">구성원</div>
+                <div className="menu">학생활동</div>
+              </div>
+              <div className="menuDropdownContainer">
+                <div className="menuDropdown">{isDropped && <Dropdown />}</div>
+              </div>
+            </ul>
+          </div>
+        </header>
+      </Fragment>
 
       <Routes>
         <Route path="" element={<Home />} />

@@ -1,0 +1,61 @@
+.class {
+  background-color: gray;
+}
+
+.classTable {
+  width: 900px;
+}
+
+.classId {
+  width: 6px;
+
+  background-color: aquamarine;
+  border-style: solid;
+  border-color: blueviolet;
+}
+
+.className {
+  width: 1vw;
+
+  background-color: aquamarine;
+  border-style: solid;
+  border-color: blueviolet;
+}
+
+.classType {
+  width: 60px;
+
+  background-color: aquamarine;
+  border-style: solid;
+  border-color: blueviolet;
+}
+
+.classGrade {
+  width: 10px;
+
+  background-color: aquamarine;
+  border-style: solid;
+  border-color: blueviolet;
+}
+
+.classCredit {
+  width: 10px;
+
+  background-color: aquamarine;
+  border-style: solid;
+  border-color: blueviolet;
+}
+
+.classDetail {
+  width: 300px;
+
+  background-color: aquamarine;
+  border-style: solid;
+  border-color: blueviolet;
+}
+
+.CourseContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,57 @@
+.IntroMainImg {
+  height: 80vh;
+  width: 100%;
+
+  background-image: url("../../../assets/IntroMainImg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.IntroMain {
+  display: flex;
+  height: 45vh;
+  width: 100%;
+  /* background-color: darkgray; */
+
+  align-items: center;
+  justify-content: center;
+}
+
+.IntoMainText {
+  font-size: 4vh;
+}
+
+.IntroKeywordContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.IntroKeyword {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: aquamarine; */
+  border-style: solid;
+  border-color: black;
+
+  border-radius: 100%;
+  width: 20vh;
+  height: 20vh;
+  font-size: 4vh;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.IntroDetailContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 5vw;
+  /* background-color: aqua; */
+}
+
+.IntroDetail {
+  display: flex;
+  flex-direction: column;
+}
