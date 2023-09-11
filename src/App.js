@@ -31,12 +31,13 @@ function App() {
             <span className="subTitle">소프트웨어학부</span>
           </Link>
           <div>
-            <ul
-              onClick={() => {
-                setIsDropped(!isDropped);
-              }}
-            >
-              <div className="menuBar">
+            <ul>
+              <div
+                className="menuBar"
+                onClick={() => {
+                  setIsDropped(!isDropped);
+                }}
+              >
                 <div className="menu">전공소개</div>
                 <div className="menu">커리큘럼</div>
                 <div className="menu">구성원</div>

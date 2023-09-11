@@ -1,61 +1,155 @@
-.class {
-  background-color: gray;
-}
-
 .classTable {
-  width: 900px;
+  /* width: 900px;
+  background-color: hotpink; */
+  display: flex;
 }
 
-.classId {
-  width: 6px;
-
-  background-color: aquamarine;
-  border-style: solid;
-  border-color: blueviolet;
+.classTheadTable {
+  /* background-color: aqua; */
 }
 
-.className {
-  width: 1vw;
-
-  background-color: aquamarine;
-  border-style: solid;
-  border-color: blueviolet;
+.classThead {
+  background-color: lightgray;
+  display: flex;
+  margin: 0;
 }
 
-.classType {
-  width: 60px;
-
-  background-color: aquamarine;
-  border-style: solid;
-  border-color: blueviolet;
+.classRow {
+  display: flex;
 }
 
-.classGrade {
-  width: 10px;
+td.classId {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background-color: aquamarine;
+  font-size: small;
+
+  /* background-color: aquamarine; */
   border-style: solid;
-  border-color: blueviolet;
+  border-color: black;
+  /* border-radius: 3px; */
+  border-collapse: collapse;
 }
 
-.classCredit {
-  width: 10px;
+td.className {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background-color: aquamarine;
+  /* font-size: small; */
+
+  /* background-color: aquamarine; */
   border-style: solid;
-  border-color: blueviolet;
+  border-color: black;
+  /* border-radius: 3px; */
+  border-collapse: collapse;
 }
 
-.classDetail {
-  width: 300px;
+td.classType {
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background-color: aquamarine;
+  font-size: small;
+
+  /* background-color: aquamarine; */
   border-style: solid;
-  border-color: blueviolet;
+  border-color: black;
+  /* border-radius: 3px; */
+  border-collapse: collapse;
+}
+
+td.classGrade {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: small;
+
+  /* background-color: aquamarine; */
+  border-style: solid;
+  border-color: black;
+  /* border-radius: 3px; */
+  border-collapse: collapse;
+}
+
+.classTerm {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: small;
+
+  /* background-color: aquamarine; */
+  border-style: solid;
+  border-color: black;
+  /* border-radius: 3px; */
+  border-collapse: collapse;
+}
+
+td.classCredit {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: small;
+
+  /* background-color: aquamarine; */
+  border-style: solid;
+  border-color: black;
+  /* border-radius: 3px; */
+  border-collapse: collapse;
+}
+
+td.classDetail {
+  width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: small;
+
+  /* background-color: aquamarine; */
+  border-style: solid;
+  border-color: black;
+  /* border-radius: 3px; */
+  border-collapse: collapse;
 }
 
 .CourseContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 100px;
+}
+
+.selectMajorContainer {
+  display: flex;
+  /* background-color: khaki; */
+}
+
+.selectMajorBtn {
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  width: 200px;
+  margin: 5px;
+  margin-top: 40px;
+  /* padding: 1px; */
+  border-radius: 10px;
+}
+
+.selectedMajor {
+  margin: 40px;
+  /* background-color: aqua; */
+  font-size: 25px;
 }
