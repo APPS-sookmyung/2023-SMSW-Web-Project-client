@@ -20,8 +20,6 @@ import Club from "./pages/StudentActivity/Club/Club.js";
 import StudentCouncil from "./pages/StudentActivity/StudentCouncil/StudentCouncil.js";
 
 function App() {
-  const [isDropped, setIsDropped] = useState(false);
-
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseOver = () => {

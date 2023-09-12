@@ -1,0 +1,45 @@
+.PracticeRoomsImg {
+  border-radius: 10px;
+  width: 200px;
+}
+
+.PracticeRoomContainer {
+  border-style: solid;
+  border-radius: 5px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.PracticeRoomPart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.PracticeRoomTwoBox {
+  display: flex;
+}
+
+.PracticeRoomName {
+  /* background-color: yellow; */
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.PracticeRoomNo {
+  /* background-color: yellow; */
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.PracticeRoomsTitle {
+  font-size: 30px;
+}
