@@ -4,9 +4,9 @@
   display: flex;
 }
 
-.classTheadTable {
-  /* background-color: aqua; */
-}
+/* .classTheadTable {
+  background-color: aqua;
+} */
 
 .classThead {
   background-color: lightgray;
@@ -132,6 +132,7 @@ td.classDetail {
 
 .selectMajorContainer {
   display: flex;
+  margin-top: 40px;
   /* background-color: khaki; */
 }
 

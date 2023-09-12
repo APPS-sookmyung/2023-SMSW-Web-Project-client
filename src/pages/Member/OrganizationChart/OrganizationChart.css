@@ -1,0 +1,18 @@
+.OrganizationChartImg {
+  width: 500px;
+}
+
+.OrganizationChartPart {
+  margin-left: 200px;
+  margin-right: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.OrganizationChartTitle {
+  font-weight: 800;
+  font-size: 20px;
+  margin: 30px;
+}

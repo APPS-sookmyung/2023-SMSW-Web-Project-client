@@ -1,4 +1,4 @@
-import React, { Image } from "react";
+import React from "react";
 import "./PracticeRooms.css";
 import m103 from "../../../assets/PracticeRooms/m103.jpeg";
 import m305 from "../../../assets/PracticeRooms/m305.jpeg";
