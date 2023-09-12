@@ -22,6 +22,16 @@ import StudentCouncil from "./pages/StudentActivity/StudentCouncil/StudentCounci
 function App() {
   const [isDropped, setIsDropped] = useState(false);
 
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
   return (
     <Fragment>
       <Fragment>
@@ -34,23 +44,30 @@ function App() {
             <ul>
               <div
                 className="menuBar"
-                onClick={() => {
-                  setIsDropped(!isDropped);
-                }}
+                // onClick={() => {
+                //   setIsDropped(!isDropped);
+                // }}
+                onMouseOver={handleMouseOver}
               >
                 <div className="menu">전공소개</div>
                 <div className="menu">커리큘럼</div>
                 <div className="menu">구성원</div>
                 <div className="menu">학생활동</div>
               </div>
-              <div className="menuDropdownContainer">
-                <div className="menuDropdown">{isDropped && <Dropdown />}</div>
-              </div>
             </ul>
           </div>
         </header>
       </Fragment>
-
+      <div className="menuDropdownContainer">
+        <div
+          onMouseOut={handleMouseOut}
+          onMouseOver={handleMouseOver}
+          className="menuDropdown"
+        >
+          {isHovering && <Dropdown />}
+        </div>
+        {/* <div className="menuDropdown">{<Dropdown />}</div> */}
+      </div>
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="/Curriculum">

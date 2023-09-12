@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { CScourseList, SCcourseList, DScourseList } from "../Course/CourseList";
 import "./Course.css";
+import DSGraduationRequirements from "../GraduationRequirements/DSGraduationRequirements";
+import CSGraduationRequirements from "../GraduationRequirements/CSGraduationRequirements";
+import SCGraduationRequirements from "../GraduationRequirements/SCGraduationRequirements";
 
 const ViewcourseList = ({ course }) => {
   return (
@@ -64,17 +67,32 @@ const Course = () => {
 
       {isCSList ? (
         <div>
-          <p className="selectedMajor">컴퓨터과학전공 교과목</p>
+          <div className="selectedMajor">
+            <p>컴퓨터과학전공 교과목</p>
+          </div>
+          <div>
+            <CSGraduationRequirements />
+          </div>
         </div>
       ) : null}
       {isSCList ? (
         <div>
-          <p className="selectedMajor">소프트웨어융합전공 교과목</p>
+          <div className="selectedMajor">
+            <p>소프트웨어융합전공 교과목</p>
+          </div>
+          <div>
+            <SCGraduationRequirements />
+          </div>
         </div>
       ) : null}
       {isDSList ? (
         <div>
-          <p className="selectedMajor">데이터사이언스전공 교과목</p>
+          <div className="selectedMajor">
+            <p>데이터사이언스전공 교과목</p>
+          </div>
+          <div>
+            <DSGraduationRequirements />
+          </div>
         </div>
       ) : null}
 
