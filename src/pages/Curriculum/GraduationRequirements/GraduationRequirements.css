@@ -11,3 +11,14 @@ td > span {
   display: flex;
   justify-content: center;
 }
+
+.GraduationRequirementsTable {
+  margin: 20px;
+}
+
+.GraduationRequirementsPart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
