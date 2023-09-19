@@ -27,7 +27,7 @@ const Club = () => {
 
   return (
     <div className="ClubPart">
-      <p className="ClubTitle">소프트웨어학부 동아리</p>
+      <p className="ClubTitle">소프트웨어학부 학회</p>
       <div>
         {ClubList.map((club) => (
           <ViewClubList club={club} key={club.name} />
