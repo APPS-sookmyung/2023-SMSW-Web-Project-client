@@ -50,7 +50,11 @@ function App() {
             </div>
           </div>
         </header>
-        <div className="DropdownDetailPart">
+        <div
+          className="DropdownDetailPart"
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}
+        >
           <div className="DropdownDetailContainer">
             {isHovering && (
               <div
