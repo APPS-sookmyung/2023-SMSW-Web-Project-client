@@ -6,7 +6,6 @@ import Curriculum from "./pages/Curriculum/Curriculum";
 import MajorInfo from "./pages/MajorInfo/MajorInfo";
 import Member from "./pages/Member/Member";
 import StudentActivity from "./pages/StudentActivity/StudentActivity";
-import Dropdown from "./components/Dropdown/Dropdown";
 import Course from "./pages/Curriculum/Course/Course.js";
 import Home from "./pages/Home/Home";
 import GraduationRequirements from "./pages/Curriculum/GraduationRequirements/GraduationRequirements.js";
@@ -42,30 +41,105 @@ function App() {
             <ul>
               <div
                 className="menuBar"
-                // onClick={() => {
-                //   setIsDropped(!isDropped);
-                // }}
+                onMouseOut={handleMouseOut}
                 onMouseOver={handleMouseOver}
               >
-                <div className="menu">전공소개</div>
-                <div className="menu">커리큘럼</div>
-                <div className="menu">구성원</div>
-                <div className="menu">학생활동</div>
+                <div className="Dropdown">
+                  <div className="menu">전공소개</div>
+                  <div>
+                    {isHovering && (
+                      <div className="DropdownContainer">
+                        <Link className="DropdownMenu" to={"/MajorInfo/Intro"}>
+                          개요
+                        </Link>
+                        <Link
+                          className="DropdownMenu"
+                          to={"/MajorInfo/AdvanceField"}
+                        >
+                          진출분야
+                        </Link>
+                        <Link
+                          className="DropdownMenu"
+                          to={"/MajorInfo/PracticeRooms"}
+                        >
+                          실습실
+                        </Link>
+                        <Link
+                          className="DropdownMenu"
+                          to={"/MajorInfo/LocationContact"}
+                        >
+                          위치와 연락처
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <div className="Dropdown">
+                  <div className="menu">커리큘럼</div>
+                  <div>
+                    {isHovering && (
+                      <div className="DropdownContainer">
+                        <Link
+                          className="DropdownMenu"
+                          to={"/Curriculum/GraduationRequirements"}
+                        >
+                          졸업요건
+                        </Link>
+                        <Link
+                          className="DropdownMenu"
+                          to={"/Curriculum/Course"}
+                        >
+                          이수과목
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <div className="Dropdown">
+                  <div className="menu">구성원</div>
+                  <div>
+                    {isHovering && (
+                      <div className="DropdownContainer">
+                        <Link className="DropdownMenu" to={"/Member/Professor"}>
+                          교수소개
+                        </Link>
+                        <Link
+                          className="DropdownMenu"
+                          to={"/Member/OrganizationChart"}
+                        >
+                          조직도
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <div className="Dropdown">
+                  <div className="menu">학생활동</div>
+                  <div>
+                    {isHovering && (
+                      <div className="DropdownContainer">
+                        <Link
+                          className="DropdownMenu"
+                          to={"/StudentActivity/Club"}
+                        >
+                          학회
+                        </Link>
+                        <Link
+                          className="DropdownMenu"
+                          to={"/StudentActivity/StudentCouncil"}
+                        >
+                          학생회
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             </ul>
           </div>
         </header>
       </Fragment>
-      <div className="menuDropdownContainer">
-        <div
-          onMouseOut={handleMouseOut}
-          onMouseOver={handleMouseOver}
-          className="menuDropdown"
-        >
-          {isHovering && <Dropdown />}
-        </div>
-        {/* <div className="menuDropdown">{<Dropdown />}</div> */}
-      </div>
+
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="/Curriculum">
