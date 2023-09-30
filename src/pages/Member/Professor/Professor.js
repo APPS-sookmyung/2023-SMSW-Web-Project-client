@@ -1,13 +1,6 @@
 import React from "react";
 import "./Professor.css";
-import {
-  ProfessorList1,
-  ProfessorList2,
-  ProfessorList3,
-  ProfessorList4,
-  ProfessorList5,
-  ProfessorList6,
-} from "../Professor/ProfessorList";
+import { ProfessorList } from "../Professor/ProfessorList";
 
 const Professor = () => {
   const ViewProfessorList = ({ professorList }) => {
@@ -29,32 +22,48 @@ const Professor = () => {
               </div>
             </div>
           </div>
-          {/* <div>
-                <div>
-                  <div className="ProfessorDetailOneColumn">
-                    <div className="ProfessorPosition">
-                      직위: {professorList.Position}
-                    </div>
-                    <div className="ProfessorPhone">
-                      전화번호: {professorList.Phone}
-                    </div>
-                    <div className="ProfessorEmail">
-                      이메일: {professorList.Email}
-                    </div>
-                  </div>
-                  <div className="ProfessorDetailOneColumn">
-                    <div className="ProfessorWebsite">
-                      사이트: {professorList.Website}
-                    </div>
-                    <div className="ProfessorField">
-                      분야: {professorList.Field}
-                    </div>
-                    <div className="ProfessorLocation">
-                      위치: {professorList.Location}
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+          <div>
+            <div className="ProfessorDetailOneColumn">
+              <span>
+                <span>직위: </span>
+                <span> {professorList.Position}</span>
+              </span>
+              {professorList.Phone !== "-" ? (
+                <span>
+                  <span>전화번호: </span>
+                  <span> {professorList.Phone}</span>
+                </span>
+              ) : null}
+
+              <span>
+                <span>이메일: </span>
+                <span> {professorList.Email}</span>
+              </span>
+              {professorList.Website !== "-" ? (
+                <span>
+                  <a
+                    style={{
+                      color: "blue",
+                      wordBreak: "break-all",
+                    }}
+                    href={professorList.Website}
+                  >
+                    {professorList.Website}
+                  </a>
+                </span>
+              ) : null}
+              <span>
+                <span>분야: </span>
+                <span> {professorList.Field}</span>
+              </span>
+              {professorList.Location !== "-" ? (
+                <span>
+                  <span>위치: </span>
+                  <span> {professorList.Location}</span>
+                </span>
+              ) : null}
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -65,53 +74,23 @@ const Professor = () => {
       <div className="ProfessorPartHeaderImg">
         <p className="ProfessorTitle">소프트웨어학부 교수 소개</p>
       </div>
-      <div className="professorOneRow">
-        {ProfessorList1.map((professorList) => (
-          <ViewProfessorList
-            professorList={professorList}
-            key={professorList.name}
-          />
-        ))}
-      </div>
-      <div className="professorOneRow">
-        {ProfessorList2.map((professorList) => (
-          <ViewProfessorList
-            professorList={professorList}
-            key={professorList.name}
-          />
-        ))}
-      </div>
-      <div className="professorOneRow">
-        {ProfessorList3.map((professorList) => (
-          <ViewProfessorList
-            professorList={professorList}
-            key={professorList.name}
-          />
-        ))}
-      </div>
-      <div className="professorOneRow">
-        {ProfessorList4.map((professorList) => (
-          <ViewProfessorList
-            professorList={professorList}
-            key={professorList.name}
-          />
-        ))}
-      </div>
-      <div className="professorOneRow">
-        {ProfessorList5.map((professorList) => (
-          <ViewProfessorList
-            professorList={professorList}
-            key={professorList.name}
-          />
-        ))}
-      </div>
-      <div className="professorOneRow">
-        {ProfessorList6.map((professorList) => (
-          <ViewProfessorList
-            professorList={professorList}
-            key={professorList.name}
-          />
-        ))}
+      <div style={{ display: "flex" }}>
+        <div className="professorOneRow">
+          {ProfessorList.slice(0, 9).map((professorList) => (
+            <ViewProfessorList
+              professorList={professorList}
+              key={professorList.name}
+            />
+          ))}
+        </div>
+        <div className="professorOneRow">
+          {ProfessorList.slice(9, 17).map((professorList) => (
+            <ViewProfessorList
+              professorList={professorList}
+              key={professorList.name}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

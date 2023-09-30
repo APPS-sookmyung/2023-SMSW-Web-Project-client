@@ -1,5 +1,7 @@
-export const ProfessorList1 = [
+export const ProfessorList = [
   {
+    id: 1,
+
     name: "이광수",
     Position: "교수",
     Phone: "02)710-9429",
@@ -11,6 +13,8 @@ export const ProfessorList1 = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773458761100.jpg",
   },
   {
+    id: 2,
+
     name: "김주균",
     Position: "교수",
     Phone: "02)710-9430",
@@ -22,6 +26,8 @@ export const ProfessorList1 = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773477598100.jpg",
   },
   {
+    id: 3,
+
     name: "최종원",
     Position: "교수",
     Phone: "02)710-9445",
@@ -32,9 +38,10 @@ export const ProfessorList1 = [
     Image:
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773519914100.jpg",
   },
-];
-export const ProfessorList2 = [
+
   {
+    id: 4,
+
     name: "창병모",
     Position: "교수",
     Phone: "02)710-9378",
@@ -47,6 +54,8 @@ export const ProfessorList2 = [
   },
 
   {
+    id: 5,
+
     name: "최영우",
     Position: "교수",
     Phone: "02)710-9763",
@@ -58,6 +67,8 @@ export const ProfessorList2 = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773549545100.jpg",
   },
   {
+    id: 6,
+
     name: "심준호",
     Position: "교수",
     Phone: "02)710-9643",
@@ -68,10 +79,10 @@ export const ProfessorList2 = [
     Image:
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773563301100.jpg",
   },
-];
 
-export const ProfessorList3 = [
   {
+    id: 7,
+
     name: "김윤희",
     Position: "교수",
     Phone: "02)710-9664",
@@ -83,6 +94,8 @@ export const ProfessorList3 = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773578243100.jpg",
   },
   {
+    id: 8,
+
     name: "유석종",
     Position: "교수",
     Phone: "02)710-9831",
@@ -95,6 +108,8 @@ export const ProfessorList3 = [
   },
 
   {
+    id: 9,
+
     name: "이기용",
     Position: "교수",
     Phone: "02)2077-7583",
@@ -105,10 +120,10 @@ export const ProfessorList3 = [
     Image:
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773607636100.jpg",
   },
-];
 
-export const ProfessorList4 = [
   {
+    id: 10,
+
     name: "김윤진",
     Position: "교수",
     Phone: "02)2077-7584",
@@ -120,6 +135,8 @@ export const ProfessorList4 = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773621487100.jpg",
   },
   {
+    id: 11,
+
     name: "박영훈",
     Position: "교수",
     Phone: "02)2077-7326",
@@ -131,6 +148,8 @@ export const ProfessorList4 = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773634870100.jpg",
   },
   {
+    id: 12,
+
     name: "채희준",
     Position: "교수",
     Phone: "02)2077-7414",
@@ -141,9 +160,10 @@ export const ProfessorList4 = [
     Image:
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773647320100.jpg",
   },
-];
-export const ProfessorList5 = [
+
   {
+    id: 13,
+
     name: "정영주",
     Position: "교수",
     Phone: "02)2077-7611",
@@ -155,10 +175,12 @@ export const ProfessorList5 = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773658587100.jpg",
   },
   {
+    id: 14,
+
     name: "박숙영",
     Position: "초빙교수",
-    Phone: "blue@sookmyung.ac.kr",
-    Email: "-",
+    Phone: "-",
+    Email: "blue@sookmyung.ac.kr ",
     Website: "-",
     Field: "무선 네트워크 통신",
     Location: "-",
@@ -166,6 +188,8 @@ export const ProfessorList5 = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773670730100.jpg",
   },
   {
+    id: 15,
+
     name: "이현자",
     Position: "초빙교수",
     Phone: "-",
@@ -176,9 +200,10 @@ export const ProfessorList5 = [
     Image:
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773680526100.jpg",
   },
-];
-export const ProfessorList6 = [
+
   {
+    id: 16,
+
     name: "박재년",
     Position: "명예교수",
     Phone: "-",
@@ -191,6 +216,8 @@ export const ProfessorList6 = [
   },
 
   {
+    id: 17,
+
     name: "문봉희",
     Position: "명예교수",
     Phone: "-",

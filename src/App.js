@@ -17,6 +17,7 @@ import Professor from "./pages/Member/Professor/Professor.js";
 import OrganizationChart from "./pages/Member/OrganizationChart/OrganizationChart.js";
 import Club from "./pages/StudentActivity/Club/Club.js";
 import StudentCouncil from "./pages/StudentActivity/StudentCouncil/StudentCouncil.js";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   const [isHovering, setIsHovering] = useState(false);
@@ -167,6 +168,7 @@ function App() {
           <Route path="Club" element={<Club />} />
           <Route path="StudentCouncil" element={<StudentCouncil />} />
         </Route>
+        <Route path="/*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </Fragment>
