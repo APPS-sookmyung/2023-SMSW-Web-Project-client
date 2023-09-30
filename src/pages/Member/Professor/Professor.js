@@ -39,19 +39,7 @@ const Professor = () => {
                 <span>이메일: </span>
                 <span> {professorList.Email}</span>
               </span>
-              {professorList.Website !== "-" ? (
-                <span>
-                  <a
-                    style={{
-                      color: "blue",
-                      wordBreak: "break-all",
-                    }}
-                    href={professorList.Website}
-                  >
-                    {professorList.Website}
-                  </a>
-                </span>
-              ) : null}
+
               <span>
                 <span>분야: </span>
                 <span> {professorList.Field}</span>
@@ -61,6 +49,19 @@ const Professor = () => {
                   <span>위치: </span>
                   <span> {professorList.Location}</span>
                 </span>
+              ) : null}
+              {professorList.Website !== "-" ? (
+                <a className="ProfessorSiteBtn" href={professorList.Website}>
+                  <span
+                    style={{
+                      alignSelf: "center",
+                      width: "auto",
+                      height: "auto",
+                    }}
+                  >
+                    +
+                  </span>
+                </a>
               ) : null}
             </div>
           </div>

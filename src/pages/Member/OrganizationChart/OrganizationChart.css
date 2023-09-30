@@ -36,3 +36,9 @@
   justify-content: center;
   margin-bottom: 20px;
 }
+
+.Btn {
+  background-color: lightgray;
+  border-radius: 100%;
+  width: 5px;
+}

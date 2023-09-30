@@ -67,7 +67,7 @@
   font-weight: 500;
   margin: 3px;
   width: auto;
-
+  word-break: keep-all;
   width: 200px;
 }
 
@@ -105,4 +105,21 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+}
+
+.ProfessorSiteBtn {
+  display: flex;
+  color: black;
+  word-break: break-all;
+  text-decoration: none;
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 40px;
+  width: 30px;
+  height: 30px;
+  align-content: center;
+  justify-content: center;
+  padding: 3px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }
