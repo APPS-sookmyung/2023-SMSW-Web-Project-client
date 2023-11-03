@@ -62,7 +62,7 @@ const Home = () => {
               <S.MajorFieldContainer>
                 <S.MajorFieldTitle>Application Software</S.MajorFieldTitle>
                 <S.MajorFieldDetail>
-                  ㄷ 이차전지 및 전기화학공학
+                  이차전지 및 전기화학공학
                 </S.MajorFieldDetail>
                 <S.MajorFieldDetail>
                   컴퓨터 그래픽스, 인간-컴퓨터 상호작용
