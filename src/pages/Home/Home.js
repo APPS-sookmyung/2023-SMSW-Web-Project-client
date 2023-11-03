@@ -1,10 +1,13 @@
 import React, { Fragment } from "react";
 import "./Home.css";
 import Links from "../../components/Links/Links";
+import PageLayout from "./pages/PageLayout/PageLayout.js";
+import Header from "./components/Header/Header.js";
+import Footer from "./components/Footer/Footer";
 
 const Home = () => {
   return (
-    <Fragment>
+    <PageLayout header={<Header />} footer={<Footer />}>
       <Fragment>
         <div className="HomeMainImg">
           <div className="HomeMainText">
@@ -102,7 +105,7 @@ const Home = () => {
       <div className="LinksPart">
         <Links />
       </div>
-    </Fragment>
+    </PageLayout>
   );
 };
 
