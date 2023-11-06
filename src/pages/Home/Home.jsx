@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./Home.style.jsx";
+import InfoTitleBox from "../../components/InfoTitleBox/InfoTitleBox.jsx";
 
 const Home = () => {
   return (
@@ -39,11 +40,7 @@ const Home = () => {
 
       <S.MajorFieldSection>
         <S.MajorFieldSectionInner>
-          <S.HomeInfoTitleContainer>
-            <S.HomeInfoTitleInner>
-              <S.HomeInfoTitle>전공분야</S.HomeInfoTitle>
-            </S.HomeInfoTitleInner>
-          </S.HomeInfoTitleContainer>
+          <InfoTitleBox title="전공분야" />
 
           <S.MajorField>
             <S.MajorFieldContainer>

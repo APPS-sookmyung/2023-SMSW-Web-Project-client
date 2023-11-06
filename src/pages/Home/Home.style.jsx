@@ -97,7 +97,7 @@ export const IntroMajorName = styled.h3`
 
 export const MajorFieldSection = styled.div`
   width: 100%;
-  height: 326px;
+  height: 50%;
   background-color: #fafafa;
 `;
 
@@ -114,10 +114,11 @@ export const HomeInfoTitleInner = styled.div`
   background-color: black;
 `;
 
-export const MajorFieldSectionInner = styled(HomeInner)`
+export const MajorFieldSectionInner = styled.div`
   align-items: center;
   justify-content: flex-start;
-  height: 100%;
+  height: auto;
+  margin: 40px;
 `;
 
 export const HomeInfoTitle = styled.h3`
@@ -135,6 +136,9 @@ export const MajorFieldDetail = styled.h3`
 
 export const MajorField = styled.div`
   display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const MajorFieldContainer = styled.div`
