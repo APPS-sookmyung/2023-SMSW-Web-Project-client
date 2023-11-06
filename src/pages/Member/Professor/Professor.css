@@ -95,18 +95,6 @@
   padding-left: 10px;
 }
 
-.ProfessorPartHeaderImg {
-  background-image: url("../../../assets/ProfessorHeaderImg.jpg");
-  background-size: cover;
-  background-position: top;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
 .ProfessorSiteBtn {
   display: flex;
   color: black;

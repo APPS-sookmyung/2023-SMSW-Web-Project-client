@@ -72,9 +72,6 @@ const Professor = () => {
 
   return (
     <div className="ProfessorPart">
-      <div className="ProfessorPartHeaderImg">
-        <p className="ProfessorTitle">소프트웨어학부 교수 소개</p>
-      </div>
       <div style={{ display: "flex" }}>
         <div className="professorOneRow">
           {ProfessorList.slice(0, 9).map((professorList) => (
