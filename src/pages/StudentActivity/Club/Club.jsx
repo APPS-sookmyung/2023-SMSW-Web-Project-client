@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import * as S from "./Club.style.jsx";
 import ClubList from "./ClubList.js";
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./StudentActivity.style.jsx";
 import Club from "./Club/index.js";
-import StudentCouncil from "./StudentCouncil/StudentCouncil.js";
+import StudentCouncil from "./StudentCouncil/index.js";
 
 const StudentActivity = () => {
   const [isClub, setIsClub] = useState(true);
@@ -49,13 +49,13 @@ const StudentActivity = () => {
             </div>
           </div>
         ) : null}
-        {/* {isStudnetCouncil ? (
+        {isStudnetCouncil ? (
           <div>
             <div>
               <StudentCouncil />
             </div>
           </div>
-        ) : null} */}
+        ) : null}
       </S.ContentContainer>
     </S.Container>
   );
