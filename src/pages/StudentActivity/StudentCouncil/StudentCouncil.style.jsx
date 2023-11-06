@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const StudentCouncilContainer = styled.div`
-  width: 100%;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,12 +51,6 @@ export const StudentCouncilSiteText = styled.h3`
   margin: 0;
 `;
 
-export const StudentCouncilEmail = styled.h3`
-  font-size: 15px;
-  font-weight: 500;
-  margin: 0;
-`;
-
 export const PresidentContainer = styled.div`
   width: 100%;
   display: flex;
@@ -85,9 +79,79 @@ export const PresidentContainerRow = styled.div`
 `;
 
 export const StudentCouncilContentsContainer = styled.div`
-  width: 900px;
+  width: 60vw auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin: 20px;
+`;
+
+export const CopyToClipboard = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  padding: 2px;
+  position: relative;
+  z-index: 10;
+  text-decoration: none;
+  margin: 10px;
+`;
+
+export const EventContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+export const EventInfoConatiner = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const EventName = styled.h3`
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+`;
+
+export const EventDate = styled.h3`
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+`;
+
+export const EventImgContainer = styled.div`
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  max-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const EventImg = styled.div`
+  background-image: url(${(props) => props.img});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+`;
+
+export const EventContentsContainer = styled.div`
+  width: 60vw auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
 `;

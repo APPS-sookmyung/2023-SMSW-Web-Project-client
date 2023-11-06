@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const ClubContainer = styled.div`
-  width: 65%;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   justify-content: center;

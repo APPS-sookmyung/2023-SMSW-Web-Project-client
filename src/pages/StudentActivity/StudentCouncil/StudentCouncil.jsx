@@ -3,26 +3,23 @@ import "./StudentCouncil.css";
 import * as S from "./StudentCouncil.style.jsx";
 import StudentCouncilEventList from "./StudentCouncilEventList";
 
+import { CopyToClipboard } from "react-copy-to-clipboard/src";
+
 const StudentCouncil = () => {
   const ViewStudentCouncilEventList = ({ event }) => {
     return (
-      <div>
-        <table className="EventTable">
-          <tbody>
-            <tr className="EventTableRow">
-              <td className="EventTableContainer">
-                <img className="EventImg" src={event.imgsrc} alt="사진"></img>
-
-                <div className="EventRepresentation">
-                  <div className="EventName">{event.name}</div>
-                  <div className="EventDate">{event.date}</div>
-                  <div className="EventDetail">{event.detail}</div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <S.EventContainer>
+        <S.Line />
+        <S.EventContentsContainer>
+          <S.EventInfoConatiner>
+            <S.EventName>{event.name}</S.EventName>
+            <S.EventDate>{event.date}</S.EventDate>
+          </S.EventInfoConatiner>
+          <S.EventImgContainer>
+            <S.EventImg img={event.imgsrc} alt="사진" />
+          </S.EventImgContainer>
+        </S.EventContentsContainer>
+      </S.EventContainer>
     );
   };
 
@@ -34,9 +31,6 @@ const StudentCouncil = () => {
           <S.StudentCouncilText>
             2023 소프트웨어학부 학생회 Index
           </S.StudentCouncilText>
-          <S.StudentCouncilEmail>
-            smsw.student.council23@gmail.com
-          </S.StudentCouncilEmail>
 
           <div
             style={{
@@ -44,11 +38,23 @@ const StudentCouncil = () => {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              marginTop: "20px",
+              marginTop: "40px",
             }}
           >
             <S.StudentCouncilSite href="https://instagram.com/smwu_software?igshid=OGQ5ZDc2ODk2ZA==">
               <S.StudentCouncilSiteText>🔗</S.StudentCouncilSiteText>
+            </S.StudentCouncilSite>
+            <S.StudentCouncilSite>
+              <S.CopyToClipboard>
+                <CopyToClipboard
+                  text="smsw.student.council23@gmail.com"
+                  onCopy={() =>
+                    alert("이메일 주소가 클립보드에 복사되었습니다.")
+                  }
+                >
+                  <S.StudentCouncilSiteText>📧</S.StudentCouncilSiteText>
+                </CopyToClipboard>
+              </S.CopyToClipboard>
             </S.StudentCouncilSite>
 
             <S.PresidentContainer>
