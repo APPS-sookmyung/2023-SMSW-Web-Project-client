@@ -1,7 +1,6 @@
 import React from "react";
 import "./StudentCouncil.css";
 import StudentCouncilEventList from "./StudentCouncilEventList";
-import IMG from "../../../assets/Semester2ClassStartParty.jpeg";
 
 const StudentCouncil = () => {
   const ViewStudentCouncilEventList = ({ event }) => {
