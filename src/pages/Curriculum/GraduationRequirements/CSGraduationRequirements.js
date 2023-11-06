@@ -1,11 +1,12 @@
 import React from "react";
 import "./GraduationRequirements.css";
+import * as S from "./GraduationRequirements.style.jsx";
 
 const CSGraduationRequirements = () => {
   return (
     <table className="table">
       <tbody>
-        <tr className="table">
+        <tr>
           <th rowSpan={2}>총 졸업학점</th>
           <th colSpan={2}>교양학점</th>
           <th colSpan={3}>제1전공 (심화과정)</th>
@@ -27,45 +28,19 @@ const CSGraduationRequirements = () => {
           <td>전공합계</td>
         </tr>
         <tr>
-          <td>
-            <span>130</span>
-          </td>
-          <td>
-            <span>10</span>
-          </td>
-          <td>
-            <span>15</span>
-          </td>
-          <td>
-            <span>15</span>
-          </td>
-          <td>
-            <span>57</span>
-          </td>
-          <td>
-            <span>72</span>
-          </td>
-          <td>
-            <span>15</span>
-          </td>
-          <td>
-            <span>9</span>
-          </td>
-          <td>
-            <span>54</span>
-          </td>
-          <td>
-            <span>15</span>
-          </td>
-          <td>
-            <span>27</span>
-          </td>
-          <td>
-            <span>42</span>
-          </td>
-          <td>
-            <span>21</span>
-          </td>
+          <td>130</td>
+          <td>10</td>
+          <td>15</td>
+          <td>15</td>
+          <td>57</td>
+          <td>72</td>
+          <td>15</td>
+          <td>9</td>
+          <td>54</td>
+          <td>15</td>
+          <td>27</td>
+          <td>42</td>
+          <td>21</td>
         </tr>
       </tbody>
     </table>

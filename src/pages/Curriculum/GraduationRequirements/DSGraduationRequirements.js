@@ -27,45 +27,19 @@ const DSGraduationRequirements = () => {
           <td>전공합계</td>
         </tr>
         <tr>
-          <td>
-            <span>130</span>
-          </td>
-          <td>
-            <span>10</span>
-          </td>
-          <td>
-            <span>15</span>
-          </td>
-          <td>
-            <span>15</span>
-          </td>
-          <td>
-            <span>57</span>
-          </td>
-          <td>
-            <span>72</span>
-          </td>
-          <td>
-            <span>15</span>
-          </td>
-          <td>
-            <span>9</span>
-          </td>
-          <td>
-            <span>54</span>
-          </td>
-          <td>
-            <span>15</span>
-          </td>
-          <td>
-            <span>27</span>
-          </td>
-          <td>
-            <span>42</span>
-          </td>
-          <td>
-            <span>21</span>
-          </td>
+          <td>130</td>
+          <td>10</td>
+          <td>15</td>
+          <td>15</td>
+          <td>57</td>
+          <td>72</td>
+          <td>15</td>
+          <td>9</td>
+          <td>54</td>
+          <td>15</td>
+          <td>27</td>
+          <td>42</td>
+          <td>21</td>
         </tr>
       </tbody>
     </table>
