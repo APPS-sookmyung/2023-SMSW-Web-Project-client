@@ -1,5 +1,4 @@
 import React from "react";
-import "./StudentCouncil.css";
 import * as S from "./StudentCouncil.style.jsx";
 import StudentCouncilEventList from "./StudentCouncilEventList";
 

@@ -356,7 +356,8 @@ export const SCcourseList = [
     id: 21002144,
     name: "프로그래밍개론",
     type: "전공선택",
-    grade: 100,
+    grade: 1,
+    term: "모든",
     credit: 3,
     detail:
       "프로그램의 설계와 작성, 컴파일러의 사용 방법과 프로그램의 실행, 프로그래밍 언어의 이해, 프로그램의 작성 연습 등을 다룬다.",
@@ -455,7 +456,8 @@ export const SCcourseList = [
     id: 21000542,
     name: "운영체제",
     type: "전공필수",
-    grade: 301,
+    grade: 3,
+    term: 1,
     credit: 3,
     detail:
       "Computer System의 구조와 조직을 이해하고 Operating System의 기초와 설계능력을 배양함으로써 Hardware Rosource의 효율적인 운영과 사용자에게 최대의 편의를 줄 수 있는 최적의 Operating System의 구성 방안을 연구한다.    ",
@@ -534,7 +536,8 @@ export const SCcourseList = [
     id: 11111211,
     name: "인터렉티브미디어",
     type: "전공선택",
-    grade: 302,
+    grade: 3,
+    term: 2,
     credit: 3,
     detail:
       "사용자가 가상공간 매체와 실시간 피드백을 받으며 상호작용을 하는 가상현실(virtual reality), 또는 게임 형식 컨텐츠에 관련된 이론과 개발 기법, 그리고 소프트웨어의 활용법을 배운다. 3D 그래픽스 이론, 가상공간 모델링(modeling), 애니메이션 및 게임 제작 기법, 스크립팅(scripting) 언어 등을 학습하며 프로젝트 수행을 통하여 자신이 직접 컨텐츠를 설계하고 구현한다.",
@@ -744,7 +747,8 @@ export const DScourseList = [
     id: 21000542,
     name: "운영체제",
     type: "전공필수",
-    grade: 301,
+    grade: 3,
+    term: 1,
     credit: 3,
     detail:
       "Computer System의 구조와 조직을 이해하고 Operating System의 기초와 설계능력을 배양함으로써 Hardware Rosource의 효율적인 운영과 사용자에게 최대의 편의를 줄 수 있는 최적의 Operating System의 구성 방안을 연구한다.    ",
@@ -763,7 +767,8 @@ export const DScourseList = [
     id: 11111117,
     name: "데이터시각화",
     type: "전공선택",
-    grade: 301,
+    grade: 3,
+    term: 1,
     credit: 3,
     detail:
       "데이터 시각화는 빅데이터 기술의 중요한 영역으로, 데이터를 이해하고 의사결정 인사이트를 얻는데 필수적이다. 본 과목에서는 데이터 시각화 표현 기법을 공부하며, 파이썬 matplotlib 라이브러리, 구글 데이터 스튜디오, MS Power BI, Tableau 등 대표적인 오픈 소스 시각화 툴을 소개하고 활용 방법을 학습한다.    ",

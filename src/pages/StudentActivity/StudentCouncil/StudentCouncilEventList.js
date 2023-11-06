@@ -11,7 +11,7 @@ export const StudentCouncilEventList = [
   },
   {
     name: "2023 MT",
-    date: "2023.03.10",
+    date: "2023.05.18",
     imgsrc: "/images/2023MT.jpeg",
   },
   {
