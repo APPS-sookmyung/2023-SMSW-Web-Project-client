@@ -29,7 +29,7 @@ export const MainInner = styled(Inner)`
   justify-content: flex-end;
   align-items: flex-start;
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 `;
 
 export const MainTitle = styled.h1`
