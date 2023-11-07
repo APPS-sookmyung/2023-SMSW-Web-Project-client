@@ -2,6 +2,8 @@ import React from "react";
 import * as S from "./MajorInfo.style.jsx";
 import InfoTitleBox from "../../components/InfoTitleBox/InfoTitleBox.jsx";
 
+import PracticeRoomsImg from "../../components/PracticeRoomsImg/PracticeRoomsImg.jsx";
+
 const MajorInfo = () => {
   return (
     <S.Container>
@@ -143,7 +145,8 @@ const MajorInfo = () => {
             {/* col 2 */}
             <S.PracticeRoomsImgContainer>
               <S.PracticeRoomsImgInner>
-                <S.PracticeRoomsImg />
+                {/* <S.PracticeRoomsImg /> */}
+                <PracticeRoomsImg />
               </S.PracticeRoomsImgInner>
             </S.PracticeRoomsImgContainer>
           </S.PracticeRoomsContentsContainer>
@@ -152,9 +155,9 @@ const MajorInfo = () => {
 
       <S.Contact>
         <S.ContactInner>
-          <S.InfoTitleBoxContainer>
-            <InfoTitleBox title="연락처" />
-          </S.InfoTitleBoxContainer>
+          {/* <S.InfoTitleBoxContainer> */}
+          <InfoTitleBox title="연락처" />
+          {/* </S.InfoTitleBoxContainer> */}
           <S.ContactContentsContainer>
             {/* col 1 */}
             <S.MapImgContainer>

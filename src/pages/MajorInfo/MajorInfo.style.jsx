@@ -140,6 +140,7 @@ export const GoalsInner = styled.div`
 
 export const InfoTitleBoxContainer = styled.div`
   width: 100%;
+  margin: 40px;
 `;
 
 export const MajorNameContainer = styled.div`
