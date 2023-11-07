@@ -6,7 +6,7 @@ import MajorForm from "../../../components/MajorForm/MajorForm.jsx";
 const MyCourse = () => {
   const [selectedYear, setSelectedYear] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(null);
-  const [submittedCourseData, setSubmittedCourseData] = useState([]);
+  const [submittedCourseData, setSubmittedCourseData] = useState(null);
 
   useEffect(() => {
     if (selectedYear && selectedSemester && submittedCourseData) {
@@ -17,7 +17,7 @@ const MyCourse = () => {
   const handleFormSubmit = (year, semester, courseData) => {
     setSelectedYear(year);
     setSelectedSemester(semester);
-    setSubmittedCourseData(...courseData);
+    setSubmittedCourseData(courseData);
   };
 
   return (
@@ -39,6 +39,7 @@ const MyCourse = () => {
                       <S.TdTextLeftAlign>{course.courseName}</S.TdTextLeftAlign>
                       <S.TdTextCenter>{course.type}</S.TdTextCenter>
                       <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                      <button>x</button>
                     </Fragment>
                   )}
                 </S.Tr>
