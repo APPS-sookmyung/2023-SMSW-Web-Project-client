@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import * as S from "./MyCourse.style.jsx";
 
 import MajorForm from "../../../components/MajorForm/MajorForm.jsx";
@@ -6,7 +6,7 @@ import MajorForm from "../../../components/MajorForm/MajorForm.jsx";
 const MyCourse = () => {
   const [selectedYear, setSelectedYear] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(null);
-  const [submittedCourseData, setSubmittedCourseData] = useState(null);
+  const [submittedCourseData, setSubmittedCourseData] = useState([]);
 
   useEffect(() => {
     if (selectedYear && selectedSemester && submittedCourseData) {
@@ -17,74 +17,342 @@ const MyCourse = () => {
   const handleFormSubmit = (year, semester, courseData) => {
     setSelectedYear(year);
     setSelectedSemester(semester);
-    setSubmittedCourseData(courseData);
+    setSubmittedCourseData(...courseData);
   };
 
   return (
     <S.Container>
-      <MajorForm onFormSubmit={handleFormSubmit} />
-
+      <S.SemesterContainer>
+        <S.Line />
+        <MajorForm onFormSubmit={handleFormSubmit} />
+      </S.SemesterContainer>
       <div>
         <S.SemesterContainer>
           <S.Line />
           <S.SemesterText>1학년 1학기</S.SemesterText>
           {submittedCourseData && (
-            <div>
+            <S.Table>
               {submittedCourseData.map((course, index) => (
-                <div key={index}>
+                <S.Tr key={index}>
                   {course.year === "1학년" && course.semester === "1학기" && (
-                    <div
-                      style={{
-                        display: "grid",
-                        gridTemplateColumns: "100px 100px 100px",
-                      }}
-                    >
-                      <div
-                        style={{
-                          border: "1px solid gray",
-                        }}
-                      >
-                        {course.courseName}
-                      </div>
-                      <div
-                        style={{
-                          border: "1px solid gray",
-                          textAlign: "center",
-                        }}
-                      >
-                        {course.credit}학점
-                      </div>
-                      <div
-                        style={{
-                          border: "1px solid gray",
-                          textAlign: "center",
-                        }}
-                      >
-                        {course.type}
-                      </div>
-                    </div>
+                    <Fragment>
+                      <S.TdTextLeftAlign>{course.courseName}</S.TdTextLeftAlign>
+                      <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                      <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                    </Fragment>
                   )}
-                </div>
+                </S.Tr>
               ))}
-            </div>
+            </S.Table>
           )}
         </S.SemesterContainer>
-
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>1학년 여름학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "1학년" &&
+                    course.semester === "여름학기" && (
+                      <Fragment>
+                        <S.TdTextLeftAlign>
+                          {course.courseName}
+                        </S.TdTextLeftAlign>
+                        <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                        <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                      </Fragment>
+                    )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
         <S.SemesterContainer>
           <S.Line />
           <S.SemesterText>1학년 2학기</S.SemesterText>
           {submittedCourseData && (
-            <div>
+            <S.Table>
               {submittedCourseData.map((course, index) => (
-                <div key={index}>
+                <S.Tr key={index}>
                   {course.year === "1학년" && course.semester === "2학기" && (
-                    <div>
-                      {course.courseName} ({course.credit} 학점)
-                    </div>
+                    <Fragment>
+                      <S.TdTextLeftAlign>{course.courseName}</S.TdTextLeftAlign>
+                      <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                      <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                    </Fragment>
                   )}
-                </div>
+                </S.Tr>
               ))}
-            </div>
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>1학년 겨울학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "1학년" &&
+                    course.semester === "겨울학기" && (
+                      <Fragment>
+                        <S.TdTextLeftAlign>
+                          {course.courseName}
+                        </S.TdTextLeftAlign>
+                        <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                        <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                      </Fragment>
+                    )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>2학년 1학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "2학년" && course.semester === "1학기" && (
+                    <Fragment>
+                      <S.TdTextLeftAlign>{course.courseName}</S.TdTextLeftAlign>
+                      <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                      <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                    </Fragment>
+                  )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>2학년 여름학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "2학년" &&
+                    course.semester === "여름학기" && (
+                      <Fragment>
+                        <S.TdTextLeftAlign>
+                          {course.courseName}
+                        </S.TdTextLeftAlign>
+                        <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                        <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                      </Fragment>
+                    )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>2학년 2학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "2학년" && course.semester === "2학기" && (
+                    <Fragment>
+                      <S.TdTextLeftAlign>{course.courseName}</S.TdTextLeftAlign>
+                      <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                      <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                    </Fragment>
+                  )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>2학년 겨울학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "2학년" &&
+                    course.semester === "겨울학기" && (
+                      <Fragment>
+                        <S.TdTextLeftAlign>
+                          {course.courseName}
+                        </S.TdTextLeftAlign>
+                        <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                        <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                      </Fragment>
+                    )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>3학년 1학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "3학년" && course.semester === "1학기" && (
+                    <Fragment>
+                      <S.TdTextLeftAlign>{course.courseName}</S.TdTextLeftAlign>
+                      <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                      <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                    </Fragment>
+                  )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>3학년 여름학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "3학년" &&
+                    course.semester === "여름학기" && (
+                      <Fragment>
+                        <S.TdTextLeftAlign>
+                          {course.courseName}
+                        </S.TdTextLeftAlign>
+                        <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                        <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                      </Fragment>
+                    )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>3학년 2학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "3학년" && course.semester === "2학기" && (
+                    <Fragment>
+                      <S.TdTextLeftAlign>{course.courseName}</S.TdTextLeftAlign>
+                      <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                      <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                    </Fragment>
+                  )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>3학년 겨울학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "3학년" &&
+                    course.semester === "겨울학기" && (
+                      <Fragment>
+                        <S.TdTextLeftAlign>
+                          {course.courseName}
+                        </S.TdTextLeftAlign>
+                        <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                        <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                      </Fragment>
+                    )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>4학년 1학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "4학년" && course.semester === "1학기" && (
+                    <Fragment>
+                      <S.TdTextLeftAlign>{course.courseName}</S.TdTextLeftAlign>
+                      <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                      <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                    </Fragment>
+                  )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>4학년 여름학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "4학년" &&
+                    course.semester === "여름학기" && (
+                      <Fragment>
+                        <S.TdTextLeftAlign>
+                          {course.courseName}
+                        </S.TdTextLeftAlign>
+                        <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                        <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                      </Fragment>
+                    )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>4학년 2학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "4학년" && course.semester === "2학기" && (
+                    <Fragment>
+                      <S.TdTextLeftAlign>{course.courseName}</S.TdTextLeftAlign>
+                      <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                      <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                    </Fragment>
+                  )}
+                </S.Tr>
+              ))}
+            </S.Table>
+          )}
+        </S.SemesterContainer>
+        <S.SemesterContainer>
+          <S.Line />
+          <S.SemesterText>4학년 겨울학기</S.SemesterText>
+          {submittedCourseData && (
+            <S.Table>
+              {submittedCourseData.map((course, index) => (
+                <S.Tr key={index}>
+                  {course.year === "4학년" &&
+                    course.semester === "겨울학기" && (
+                      <Fragment>
+                        <S.TdTextLeftAlign>
+                          {course.courseName}
+                        </S.TdTextLeftAlign>
+                        <S.TdTextCenter>{course.type}</S.TdTextCenter>
+                        <S.TdTextCenter>{course.credit}학점</S.TdTextCenter>
+                      </Fragment>
+                    )}
+                </S.Tr>
+              ))}
+            </S.Table>
           )}
         </S.SemesterContainer>
       </div>
