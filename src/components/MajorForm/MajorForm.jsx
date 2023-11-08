@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./MajorForm.style.jsx";
 
-function MajorForm({ onFormSubmit, onDeleteCourse }) {
+function MajorForm({ onFormSubmit }) {
   const [year, setYear] = useState("1학년");
   const [semester, setSemester] = useState("1학기");
   const [type, setType] = useState("교양필수");
