@@ -9,6 +9,9 @@ import SCGraduationRequirements from "../Curriculum/GraduationRequirements/SCGra
 
 import MyCourse from "./MyCourse/MyCourse.jsx";
 
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+
 const Curriculum = () => {
   const [isCSList, setIsCSList] = useState(true);
   const [isSCList, setIsSCList] = useState(false);
@@ -22,8 +25,10 @@ const Curriculum = () => {
     <S.Container>
       <S.MainImg>
         <S.MainInner>
-          <S.MainTitle>커리큘럼</S.MainTitle>
-          <S.MainSubTitle>Curriculum</S.MainSubTitle>
+          <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
+            <S.MainTitle>커리큘럼</S.MainTitle>
+            <S.MainSubTitle>Curriculum</S.MainSubTitle>
+          </AnimationOnScroll>
         </S.MainInner>
       </S.MainImg>
       <S.CourseContainer>
