@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./Member.style.jsx";
 import InfoTitleBox from "../../components/InfoTitleBox/InfoTitleBox.jsx";
-import Professor from "./Professor/Professor.js";
+import Professor from "./Professor/Professor.jsx";
 
 const Member = () => {
   return (
