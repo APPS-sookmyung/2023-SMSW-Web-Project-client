@@ -214,20 +214,20 @@ const MyCourseList = () => {
         <FS.CountCreditContainer>
           <FS.Table>
             <FS.Tr>
-              <FS.Th>총 학점</FS.Th>
               <FS.Th>교양필수</FS.Th>
               <FS.Th>교양선택</FS.Th>
               <FS.Th>전공필수</FS.Th>
               <FS.Th>전공선택</FS.Th>
-              <FS.Th>전공 계</FS.Th>
+              <FS.Th style={{ backgroundColor: "#e9e9e9" }}>전공 계</FS.Th>
+              <FS.Th style={{ backgroundColor: "#e9e9e9" }}>총 학점</FS.Th>
             </FS.Tr>
             <FS.Tr>
-              <FS.Td>{totalCredits}</FS.Td>
               <FS.Td>{generalRequire}</FS.Td>
               <FS.Td>{generalElective}</FS.Td>
               <FS.Td>{advMajorRequire}</FS.Td>
               <FS.Td>{advMajorElective}</FS.Td>
               <FS.Td>{totalMojorCredits}</FS.Td>
+              <FS.Td>{totalCredits}</FS.Td>
             </FS.Tr>
           </FS.Table>
         </FS.CountCreditContainer>
