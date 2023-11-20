@@ -95,12 +95,6 @@ const MajorForm = ({ onFormSubmit }) => {
           <FS.Submit type="submit">확인</FS.Submit>
         </FS.Form>
       </FS.FormContainer>
-      <MyCourseTotal
-        generalRequire={generalRequire}
-        generalElective={generalElective}
-        advMajorRequire={advMajorRequire}
-        advMajorElective={advMajorElective}
-      />
     </FS.Container>
   );
 };
@@ -152,6 +146,33 @@ const MyCourseList = () => {
   const [selectedSemester, setSelectedSemester] = useState(null);
   const [submittedCourseData, setSubmittedCourseData] = useState([]);
 
+  const [totalCredits, setTotalCredits] = useState(0);
+  const [totalMojorCredits, setTotalMojorCredits] = useState(0);
+
+  const calculateTotalCredits = (courses) => {
+    let totalCredits = 0;
+    let totalMojorCredits = 0;
+
+    const majorCourseData = courses.filter(
+      (course) => course.type === "전공선택" || course.type === "전공필수"
+    );
+
+    courses.forEach((course) => {
+      totalCredits += course.credit;
+    });
+    majorCourseData.forEach((course) => {
+      totalMojorCredits += course.credit;
+    });
+
+    setTotalCredits(totalCredits);
+    setTotalMojorCredits(totalMojorCredits);
+  };
+
+  useEffect(() => {
+    setTotalCredits(totalCredits);
+    setTotalMojorCredits(totalMojorCredits);
+  }, [totalCredits, totalMojorCredits]);
+
   useEffect(() => {
     if (selectedYear && selectedSemester && submittedCourseData) {
       console.log(submittedCourseData);
@@ -161,7 +182,9 @@ const MyCourseList = () => {
   const handleFormSubmit = (year, semester, courseData) => {
     setSelectedYear(year);
     setSelectedSemester(semester);
-    setSubmittedCourseData([...submittedCourseData, courseData]);
+    const newCourseData = [...submittedCourseData, courseData];
+    setSubmittedCourseData(newCourseData);
+    calculateTotalCredits(newCourseData);
   };
 
   const deleteCourse = (courseName) => {
@@ -169,6 +192,7 @@ const MyCourseList = () => {
       (course) => course.courseName !== courseName
     );
     setSubmittedCourseData(newCourseData);
+    calculateTotalCredits(newCourseData);
   };
 
   return (
@@ -176,6 +200,26 @@ const MyCourseList = () => {
       <S.SemesterContainer>
         <S.Line />
         <MajorForm onFormSubmit={handleFormSubmit} />
+        <FS.CountCreditContainer>
+          <FS.Table>
+            <FS.Tr>
+              <FS.Th>총 학점</FS.Th>
+              <FS.Th>교양필수</FS.Th>
+              <FS.Th>교양선택</FS.Th>
+              <FS.Th>전공필수</FS.Th>
+              <FS.Th>전공선택</FS.Th>
+              <FS.Th>전공 계</FS.Th>
+            </FS.Tr>
+            <FS.Tr>
+              <FS.Td>{totalCredits}</FS.Td>
+              <FS.Td>{}</FS.Td>
+              <FS.Td>{}</FS.Td>
+              <FS.Td>{}</FS.Td>
+              <FS.Td>{}</FS.Td>
+              <FS.Td>{totalMojorCredits}</FS.Td>
+            </FS.Tr>
+          </FS.Table>
+        </FS.CountCreditContainer>
       </S.SemesterContainer>
       <div>
         <S.SemesterContainer>
