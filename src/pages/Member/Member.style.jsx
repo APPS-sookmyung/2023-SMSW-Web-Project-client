@@ -19,7 +19,8 @@ export const Inner = styled.div`
 export const MainImg = styled.div`
   background-image: url("/images/Member.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
+  background-repeat: no-repeat;
   width: 100%;
   height: 80vh;
   display: flex;
