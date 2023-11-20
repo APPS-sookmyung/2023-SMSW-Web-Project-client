@@ -20,32 +20,38 @@ const Professor = () => {
         </S.ProfessorImgContainer>
 
         <S.ProfessorDetailOneColumn>
-          <span>
-            <span>직위: </span>
-            <span> {professorList.Position}</span>
-          </span>
-          {professorList.Phone !== "-" ? (
-            <span>
-              <span>전화번호: </span>
-              <span> {professorList.Phone}</span>
-            </span>
-          ) : null}
-
-          <span>
-            <span>이메일: </span>
-            <span> {professorList.Email}</span>
-          </span>
-
-          <span>
-            <span>분야: </span>
-            <span> {professorList.Field}</span>
-          </span>
-          {professorList.Location !== "-" ? (
-            <span>
-              <span>위치: </span>
-              <span> {professorList.Location}</span>
-            </span>
-          ) : null}
+          <S.Table>
+            <colgroup>
+              <col style={{ width: "30%" }} />
+              <col style={{ width: "70%" }} />
+            </colgroup>
+            <tbody>
+              <tr>
+                <S.Th>직위</S.Th>
+                <S.Td>{professorList.Position}</S.Td>
+              </tr>
+              {professorList.Phone !== "-" && (
+                <tr>
+                  <S.Th>번호</S.Th>
+                  <S.Td>{professorList.Phone}</S.Td>
+                </tr>
+              )}
+              <tr>
+                <S.Th>이메일</S.Th>
+                <S.Td>{professorList.Email}</S.Td>
+              </tr>
+              <tr>
+                <S.Th>분야</S.Th>
+                <S.Td>{professorList.Field}</S.Td>
+              </tr>
+              {professorList.Location !== "-" && (
+                <tr>
+                  <S.Th>위치</S.Th>
+                  <S.Td>{professorList.Location}</S.Td>
+                </tr>
+              )}
+            </tbody>
+          </S.Table>
           {professorList.Website !== "-" ? (
             <S.ProfessorSiteBtn href={professorList.Website}>
               <span
@@ -55,7 +61,7 @@ const Professor = () => {
                   height: "auto",
                 }}
               >
-                +
+                🔗
               </span>
             </S.ProfessorSiteBtn>
           ) : null}
