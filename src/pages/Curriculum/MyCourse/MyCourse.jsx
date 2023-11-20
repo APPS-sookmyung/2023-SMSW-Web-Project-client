@@ -69,8 +69,8 @@ const MajorForm = ({ onFormSubmit }) => {
           </FS.Select>
           <FS.Select onChange={(e) => setSemester(e.target.value)}>
             <FS.Option value="1학기">1학기</FS.Option>
-            <FS.Option value="2학기">2학기</FS.Option>
             <FS.Option value="여름학기">여름학기</FS.Option>
+            <FS.Option value="2학기">2학기</FS.Option>
             <FS.Option value="겨울학기">겨울학기</FS.Option>
           </FS.Select>
           <FS.Input name="name" placeholder="교과목명" />
@@ -204,7 +204,7 @@ const MyCourseList = () => {
   };
 
   const allYears = ["1학년", "2학년", "3학년", "4학년"];
-  const allSemesters = ["1학기", "2학기", "여름학기", "겨울학기"];
+  const allSemesters = ["1학기", "여름학기", "2학기", "겨울학기"];
 
   return (
     <S.Container>
