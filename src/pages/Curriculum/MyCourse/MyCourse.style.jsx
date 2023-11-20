@@ -12,7 +12,7 @@ export const SemesterContainer = styled.div`
   flex-direction: column;
   width: 70vw;
   margin: 0 auto;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 `;
 
 export const SemesterText = styled.h3`
