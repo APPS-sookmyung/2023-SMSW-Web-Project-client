@@ -53,8 +53,8 @@ export const ProfessorContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
-  padding: 0 20px;
+
+  padding: 40px;
   background-color: #fafafa;
 `;
 
