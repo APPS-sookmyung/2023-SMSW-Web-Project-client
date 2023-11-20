@@ -6,10 +6,12 @@ const Header = () => {
   return (
     <div className="HeaderContainer">
       <div className="HeaderInner">
-        <Link to={"/"} className="titleBtn">
-          <span className="title">숙명여자대학교</span>
-          <span className="subTitle">소프트웨어학부</span>
-        </Link>
+        <div className="titleContainer">
+          <Link to={"/"} className="titleBtn">
+            <h4 className="title">숙명여자대학교</h4>
+            <h4 className="title">소프트웨어학부</h4>
+          </Link>
+        </div>
 
         <div className="menuBar">
           <Link className="menu" to={"/MajorInfo"}>
