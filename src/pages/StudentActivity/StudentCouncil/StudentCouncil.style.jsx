@@ -155,3 +155,7 @@ export const EventContentsContainer = styled.div`
   align-items: flex-start;
   margin: 20px;
 `;
+
+export const EventListContainer = styled.div`
+  width: 60vw;
+`;
