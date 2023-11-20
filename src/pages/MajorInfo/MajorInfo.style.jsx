@@ -314,16 +314,16 @@ export const ContactContentsContainer = styled.div`
 
 export const MapImgContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   width: 100%;
   height: 100%;
-  margin: 0px 5%;
+  margin: 0px 3%;
 `;
 
 export const MapImgInner = styled.div`
   display: flex;
-  align-items: center;
+
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -333,8 +333,9 @@ export const MapImg = styled.div`
   background-image: url("/images/CampusMap.jpeg");
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 100%;
+  background-repeat: no-repeat;
+  width: 32rem;
+  height: 25rem;
 `;
 
 export const ContactInfoContainer = styled.div`
@@ -355,6 +356,7 @@ export const ContactInfoBox = styled.div`
   flex-direction: row;
   width: 100%;
   height: 100%;
+  margin-top: 10px;
 `;
 
 export const ContactInfo = styled.h3`
