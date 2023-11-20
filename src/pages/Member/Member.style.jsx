@@ -55,3 +55,23 @@ export const ProfessorContainer = styled.div`
   margin: 40px;
   padding: 0 20px;
 `;
+
+export const InfoTitleBoxContainer = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+`;
+
+export const OrganizationChart = styled.div`
+  background-image: url("/images/OrganizationChart.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+`;
+
+export const OrganizationChartContainer = styled.div`
+  width: fit-content;
+  height: fit-content;
+`;

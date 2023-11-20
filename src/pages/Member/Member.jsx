@@ -15,6 +15,13 @@ const Member = () => {
 
       <S.ProfessorContainer>
         <Professor />
+
+        <S.InfoTitleBoxContainer>
+          <InfoTitleBox title="조직도" />
+        </S.InfoTitleBoxContainer>
+        <S.OrganizationChartContainer>
+          <S.OrganizationChart />
+        </S.OrganizationChartContainer>
       </S.ProfessorContainer>
     </S.Container>
   );
