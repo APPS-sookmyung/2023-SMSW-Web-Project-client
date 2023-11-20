@@ -277,7 +277,7 @@ export const PracticeRoomsImg = styled.div`
 
 export const PracticeRoomsContentsContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
