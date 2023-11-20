@@ -160,12 +160,12 @@ export const MajorFieldTitle = styled.h2`
 
 export const LinksSection = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 80vh;
 
   background-image: url("/images/LinksPartImg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right 0 bottom 0;
+  background-position: bottom;
 `;
 
 export const linksContainer = styled.div`
@@ -189,7 +189,7 @@ export const linksBox = styled.a`
   text-align: center;
   text-decoration: none;
 
-  background-color: white;
+  background-color: #ffffffb5;
   border-radius: 10px;
 `;
 
