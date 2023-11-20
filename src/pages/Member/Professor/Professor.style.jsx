@@ -5,7 +5,7 @@ export const ProfessorPart = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 `;
 
 export const Container = styled.div`

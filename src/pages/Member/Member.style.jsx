@@ -52,7 +52,7 @@ export const ProfessorContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px;
+  margin-top: 40px;
   padding: 0 20px;
 `;
 
@@ -74,4 +74,14 @@ export const OrganizationChart = styled.div`
 export const OrganizationChartContainer = styled.div`
   width: fit-content;
   height: fit-content;
+  margin-bottom: 40px;
+`;
+
+export const OrganizationChartPart = styled.div`
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 40px;
 `;
