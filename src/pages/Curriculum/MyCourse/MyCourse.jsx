@@ -15,8 +15,6 @@ const MajorForm = ({ onFormSubmit }) => {
   const [advMajorRequire, setAdvMajorRequire] = useState(0);
   const [advMajorElective, setAdvMajorElective] = useState(0);
 
-  const [courseData, setCourseData] = useState(null); // State to store submitted course data
-
   const submit = (e) => {
     e.preventDefault();
 
@@ -40,7 +38,6 @@ const MajorForm = ({ onFormSubmit }) => {
         type: selectedType,
       };
 
-      // Update the state variables based on the selected radio button
       if (type === "교양필수") {
         setGeneralRequire(generalRequire + credit);
       } else if (type === "교양선택") {
@@ -58,17 +55,9 @@ const MajorForm = ({ onFormSubmit }) => {
       nameInput.value = "";
       creditInput.value = "";
 
-      // Store the submitted course data in the state
-      // const updatedCourseData = [...courseData, course];
-      // setCourseData(updatedCourseData);
-
-      // Call the callback function to pass the updated courseData to the parent component
       onFormSubmit(selectedYear, selectedSemester, course);
     }
   };
-
-  const advMajorTotal = advMajorRequire + advMajorElective;
-  const majorTotal = advMajorTotal + generalRequire + generalElective;
 
   return (
     <FS.Container>
@@ -106,31 +95,59 @@ const MajorForm = ({ onFormSubmit }) => {
           <FS.Submit type="submit">확인</FS.Submit>
         </FS.Form>
       </FS.FormContainer>
-      <FS.CountCreditContainer>
-        <FS.Table>
-          <FS.Tr>
-            <FS.Th>총 학점</FS.Th>
-            <FS.Th>교양필수</FS.Th>
-            <FS.Th>교양선택</FS.Th>
-            <FS.Th>전공필수</FS.Th>
-            <FS.Th>전공선택</FS.Th>
-            <FS.Th>전공 계</FS.Th>
-          </FS.Tr>
-          <FS.Tr>
-            <FS.Td>{majorTotal}</FS.Td>
-            <FS.Td>{generalRequire}</FS.Td>
-            <FS.Td>{generalElective}</FS.Td>
-            <FS.Td>{advMajorRequire}</FS.Td>
-            <FS.Td>{advMajorElective}</FS.Td>
-            <FS.Td>{advMajorTotal}</FS.Td>
-          </FS.Tr>
-        </FS.Table>
-      </FS.CountCreditContainer>
+      <MyCourseTotal
+        generalRequire={generalRequire}
+        generalElective={generalElective}
+        advMajorRequire={advMajorRequire}
+        advMajorElective={advMajorElective}
+      />
     </FS.Container>
   );
 };
 
-const MyCourse = () => {
+const MyCourseTotal = ({
+  generalRequire,
+  generalElective,
+  advMajorRequire,
+  advMajorElective,
+}) => {
+  const [advMajorTotal, setAdvMajorTotal] = useState(0);
+  const [majorTotal, setMajorTotal] = useState(0);
+
+  useEffect(() => {
+    const calculatedAdvMajorTotal = advMajorRequire + advMajorElective;
+    const calculatedMajorTotal =
+      advMajorRequire + advMajorElective + generalRequire + generalElective;
+
+    setAdvMajorTotal(calculatedAdvMajorTotal);
+    setMajorTotal(calculatedMajorTotal);
+  }, [generalRequire, generalElective, advMajorRequire, advMajorElective]);
+
+  return (
+    <FS.CountCreditContainer>
+      <FS.Table>
+        <FS.Tr>
+          <FS.Th>총 학점</FS.Th>
+          <FS.Th>교양필수</FS.Th>
+          <FS.Th>교양선택</FS.Th>
+          <FS.Th>전공필수</FS.Th>
+          <FS.Th>전공선택</FS.Th>
+          <FS.Th>전공 계</FS.Th>
+        </FS.Tr>
+        <FS.Tr>
+          <FS.Td>{majorTotal}</FS.Td>
+          <FS.Td>{generalRequire}</FS.Td>
+          <FS.Td>{generalElective}</FS.Td>
+          <FS.Td>{advMajorRequire}</FS.Td>
+          <FS.Td>{advMajorElective}</FS.Td>
+          <FS.Td>{advMajorTotal}</FS.Td>
+        </FS.Tr>
+      </FS.Table>
+    </FS.CountCreditContainer>
+  );
+};
+
+const MyCourseList = () => {
   const [selectedYear, setSelectedYear] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(null);
   const [submittedCourseData, setSubmittedCourseData] = useState([]);
@@ -585,4 +602,4 @@ const MyCourse = () => {
   );
 };
 
-export default MyCourse;
+export default MyCourseList;
