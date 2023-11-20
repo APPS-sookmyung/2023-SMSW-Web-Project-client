@@ -96,7 +96,7 @@ export const IntroMajorName = styled.h3`
 `;
 
 export const MajorFieldSection = styled.div`
-  width: 100vh;
+  width: 100%;
   height: 50%;
   background-color: #fafafa;
 `;
@@ -118,6 +118,7 @@ export const MajorFieldSectionInner = styled.div`
   align-items: center;
   justify-content: flex-start;
   height: auto;
+  width: 100vw;
   margin: 40px;
 `;
 
@@ -182,8 +183,8 @@ export const linksContaineColumn = styled.div`
 `;
 
 export const linksBox = styled.a`
-  width: 220px;
-  height: 60px;
+  width: 17vw;
+  height: 8vh;
   margin: 5px;
 
   text-align: center;
@@ -195,6 +196,6 @@ export const linksBox = styled.a`
 
 export const linksName = styled.h3`
   color: black;
-  font-size: 20px;
+  font-size: 1.1rem;
   font-weight: 700;
 `;
