@@ -54,6 +54,7 @@ export const ProfessorContainer = styled.div`
   align-items: center;
   margin-top: 40px;
   padding: 0 20px;
+  background-color: #fafafa;
 `;
 
 export const InfoTitleBoxContainer = styled.div`
@@ -78,7 +79,7 @@ export const OrganizationChartContainer = styled.div`
 `;
 
 export const OrganizationChartPart = styled.div`
-  background-color: #fafafa;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   width: 100%;
