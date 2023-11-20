@@ -1,9 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import * as S from "./MyCourse.style.jsx";
 
-// import MajorForm from "../../../components/MajorForm/MajorForm.jsx";
-
-import * as FS from "../../../components/MajorForm/MajorForm.style.jsx";
+import * as FS from "./MajorForm.style.jsx";
 
 const MajorForm = ({ onFormSubmit }) => {
   const [year, setYear] = useState("1학년");
@@ -99,48 +97,6 @@ const MajorForm = ({ onFormSubmit }) => {
   );
 };
 
-const MyCourseTotal = ({
-  generalRequire,
-  generalElective,
-  advMajorRequire,
-  advMajorElective,
-}) => {
-  const [advMajorTotal, setAdvMajorTotal] = useState(0);
-  const [majorTotal, setMajorTotal] = useState(0);
-
-  useEffect(() => {
-    const calculatedAdvMajorTotal = advMajorRequire + advMajorElective;
-    const calculatedMajorTotal =
-      advMajorRequire + advMajorElective + generalRequire + generalElective;
-
-    setAdvMajorTotal(calculatedAdvMajorTotal);
-    setMajorTotal(calculatedMajorTotal);
-  }, [generalRequire, generalElective, advMajorRequire, advMajorElective]);
-
-  return (
-    <FS.CountCreditContainer>
-      <FS.Table>
-        <FS.Tr>
-          <FS.Th>총 학점</FS.Th>
-          <FS.Th>교양필수</FS.Th>
-          <FS.Th>교양선택</FS.Th>
-          <FS.Th>전공필수</FS.Th>
-          <FS.Th>전공선택</FS.Th>
-          <FS.Th>전공 계</FS.Th>
-        </FS.Tr>
-        <FS.Tr>
-          <FS.Td>{majorTotal}</FS.Td>
-          <FS.Td>{generalRequire}</FS.Td>
-          <FS.Td>{generalElective}</FS.Td>
-          <FS.Td>{advMajorRequire}</FS.Td>
-          <FS.Td>{advMajorElective}</FS.Td>
-          <FS.Td>{advMajorTotal}</FS.Td>
-        </FS.Tr>
-      </FS.Table>
-    </FS.CountCreditContainer>
-  );
-};
-
 const MyCourseList = () => {
   const [selectedYear, setSelectedYear] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(null);
@@ -148,30 +104,82 @@ const MyCourseList = () => {
 
   const [totalCredits, setTotalCredits] = useState(0);
   const [totalMojorCredits, setTotalMojorCredits] = useState(0);
+  const [generalRequire, setGeneralRequire] = useState(0);
+  const [generalElective, setGeneralElective] = useState(0);
+  const [advMajorRequire, setAdvMajorRequire] = useState(0);
+  const [advMajorElective, setAdvMajorElective] = useState(0);
 
-  const calculateTotalCredits = (courses) => {
+  const calculateCredits = (courses) => {
     let totalCredits = 0;
     let totalMojorCredits = 0;
+    let generalRequire = 0;
+    let generalElective = 0;
+    let advMajorRequire = 0;
+    let advMajorElective = 0;
 
     const majorCourseData = courses.filter(
       (course) => course.type === "전공선택" || course.type === "전공필수"
+    );
+    const generalRequireData = courses.filter(
+      (course) => course.type === "교양필수"
+    );
+    const generalElectiveData = courses.filter(
+      (course) => course.type === "교양선택"
+    );
+    const advMajorRequireData = courses.filter(
+      (course) => course.type === "전공필수"
+    );
+    const advMajorElectiveData = courses.filter(
+      (course) => course.type === "전공선택"
     );
 
     courses.forEach((course) => {
       totalCredits += course.credit;
     });
+
     majorCourseData.forEach((course) => {
       totalMojorCredits += course.credit;
     });
 
+    generalRequireData.forEach((course) => {
+      generalRequire += course.credit;
+    });
+
+    generalElectiveData.forEach((course) => {
+      generalElective += course.credit;
+    });
+
+    advMajorRequireData.forEach((course) => {
+      advMajorRequire += course.credit;
+    });
+
+    advMajorElectiveData.forEach((course) => {
+      advMajorElective += course.credit;
+    });
+
     setTotalCredits(totalCredits);
     setTotalMojorCredits(totalMojorCredits);
+    setGeneralRequire(generalRequire);
+    setGeneralElective(generalElective);
+    setAdvMajorRequire(advMajorRequire);
+    setAdvMajorElective(advMajorElective);
   };
 
   useEffect(() => {
     setTotalCredits(totalCredits);
     setTotalMojorCredits(totalMojorCredits);
-  }, [totalCredits, totalMojorCredits]);
+    setGeneralRequire(generalRequire);
+    setGeneralElective(generalElective);
+    setAdvMajorRequire(advMajorRequire);
+    setAdvMajorElective(advMajorElective);
+  }, [
+    totalCredits,
+    totalMojorCredits,
+    generalRequire,
+    generalElective,
+    advMajorRequire,
+    advMajorElective,
+  ]);
 
   useEffect(() => {
     if (selectedYear && selectedSemester && submittedCourseData) {
@@ -184,7 +192,7 @@ const MyCourseList = () => {
     setSelectedSemester(semester);
     const newCourseData = [...submittedCourseData, courseData];
     setSubmittedCourseData(newCourseData);
-    calculateTotalCredits(newCourseData);
+    calculateCredits(newCourseData);
   };
 
   const deleteCourse = (courseName) => {
@@ -192,7 +200,7 @@ const MyCourseList = () => {
       (course) => course.courseName !== courseName
     );
     setSubmittedCourseData(newCourseData);
-    calculateTotalCredits(newCourseData);
+    calculateCredits(newCourseData);
   };
 
   return (
@@ -212,10 +220,10 @@ const MyCourseList = () => {
             </FS.Tr>
             <FS.Tr>
               <FS.Td>{totalCredits}</FS.Td>
-              <FS.Td>{}</FS.Td>
-              <FS.Td>{}</FS.Td>
-              <FS.Td>{}</FS.Td>
-              <FS.Td>{}</FS.Td>
+              <FS.Td>{generalRequire}</FS.Td>
+              <FS.Td>{generalElective}</FS.Td>
+              <FS.Td>{advMajorRequire}</FS.Td>
+              <FS.Td>{advMajorElective}</FS.Td>
               <FS.Td>{totalMojorCredits}</FS.Td>
             </FS.Tr>
           </FS.Table>
