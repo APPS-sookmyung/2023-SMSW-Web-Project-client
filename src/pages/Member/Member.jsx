@@ -12,8 +12,8 @@ const Member = () => {
       <S.MainImg>
         <S.MainInner>
           <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
-            <S.MainTitle>교수 소개</S.MainTitle>
-            <S.MainSubTitle>Professor</S.MainSubTitle>
+            <S.MainTitle>교수 소개 & 조직도</S.MainTitle>
+            <S.MainSubTitle>Professor & Organization Chart</S.MainSubTitle>
           </AnimationOnScroll>
         </S.MainInner>
       </S.MainImg>
