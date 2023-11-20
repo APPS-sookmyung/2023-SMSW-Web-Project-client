@@ -181,7 +181,7 @@ const MajorInfo = () => {
                   <S.PracticeRoomsNameBox>
                     <S.PracticeRoomsName>PC 실습실</S.PracticeRoomsName>
                   </S.PracticeRoomsNameBox>
-                </AnimationOnScroll>{" "}
+                </AnimationOnScroll>
                 <AnimationOnScroll
                   animateIn="animate__fadeInUp"
                   animateOnce={true}

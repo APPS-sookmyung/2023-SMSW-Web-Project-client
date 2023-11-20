@@ -26,7 +26,7 @@ export const MainImg = styled.div`
   background-image: url("/images/IntroMainImg.jpg");
   background-size: cover;
   background-position: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
 `;
@@ -96,7 +96,7 @@ export const IntroMajorName = styled.h3`
 `;
 
 export const MajorFieldSection = styled.div`
-  width: 100%;
+  width: 100vh;
   height: 50%;
   background-color: #fafafa;
 `;
@@ -162,7 +162,7 @@ export const LinksSection = styled.div`
   width: 100%;
   height: 80vh;
 
-  background-image: url("/images/LinksPartImg.jpg");
+  background-image: url("/images/LinksPartImg.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
