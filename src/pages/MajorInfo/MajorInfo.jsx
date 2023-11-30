@@ -299,7 +299,26 @@ const MajorInfo = () => {
                   animateIn="animate__fadeInUp"
                   animateOnce={true}
                 >
-                  <div style={{ marginTop: "15%" }} />
+                  <div style={{ marginTop: "10%" }} />
+                  <S.Line />
+                </AnimationOnScroll>
+                <AnimationOnScroll
+                  animateIn="animate__fadeInUp"
+                  animateOnce={true}
+                >
+                  <S.ContactInfoBox>
+                    <S.ContactInfo>소프트웨어학부 공동기기실</S.ContactInfo>
+                    <S.ContactInfoDetail>
+                      <S.ContactInfoWhere>명신관 406호</S.ContactInfoWhere>
+                      <S.ContactInfoTel>TEL: 02-710-9295</S.ContactInfoTel>
+                    </S.ContactInfoDetail>
+                  </S.ContactInfoBox>
+                </AnimationOnScroll>
+                <AnimationOnScroll
+                  animateIn="animate__fadeInUp"
+                  animateOnce={true}
+                >
+                  <div style={{ marginTop: "10%" }} />
                   <S.Line />
                 </AnimationOnScroll>
                 <AnimationOnScroll

@@ -363,6 +363,7 @@ export const ContactInfo = styled.h3`
   margin: 5px;
   font-size: 25px;
   font-weight: 700;
+  width: 19vw;
 `;
 
 export const ContactInfoDetail = styled.div`
