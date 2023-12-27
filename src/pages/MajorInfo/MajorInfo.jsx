@@ -269,7 +269,7 @@ const MajorInfo = () => {
                   animateIn="animate__fadeInUp"
                   animateOnce={true}
                 >
-                  <S.MapImg />
+                  <S.MapImg> &nbsp;</S.MapImg>
                 </AnimationOnScroll>
               </S.MapImgInner>
             </S.MapImgContainer>
