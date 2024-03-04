@@ -1,12 +1,12 @@
-import "./PageLayout.css";
+import * as S from "./PageLayout.style.jsx";
 
 const PageLayout = ({ header, footer, children }) => {
   return (
-    <div className="Layout">
+    <S.Layout>
       {header}
       {children}
       {footer}
-    </div>
+    </S.Layout>
   );
 };
 
