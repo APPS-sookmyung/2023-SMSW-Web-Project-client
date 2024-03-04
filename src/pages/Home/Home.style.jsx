@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
 `;
 
 export const HomeInner = styled.div`
@@ -26,7 +26,7 @@ export const MainImg = styled.div`
   background-image: url("/images/IntroMainImg.jpg");
   background-size: cover;
   background-position: center;
-  width: 100vw;
+  width: inherit;
   height: 100vh;
   display: flex;
 `;
@@ -96,14 +96,14 @@ export const IntroMajorName = styled.h3`
 `;
 
 export const MajorFieldSection = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 50%;
   background-color: #fafafa;
   align-items: center;
 `;
 
 export const HomeInfoTitleContainer = styled.div`
-  width: 100vw;
+  width: 100%;
 `;
 
 export const HomeInfoTitleInner = styled.div`
@@ -119,7 +119,7 @@ export const MajorFieldSectionInner = styled.div`
   align-items: center;
   justify-content: flex-start;
   height: auto;
-  width: 100vw;
+  width: 100%;
 `;
 
 export const HomeInfoTitle = styled.h3`
