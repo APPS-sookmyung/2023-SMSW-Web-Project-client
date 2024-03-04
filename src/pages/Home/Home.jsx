@@ -50,9 +50,11 @@ const Home = () => {
       <S.MajorFieldSection>
         <S.MajorFieldSectionInner>
           <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
-            <InfoTitleBox title="전공분야" />
-
             <S.MajorField>
+              <S.InfoTitleBoxContainer>
+                <InfoTitleBox title="전공분야" />
+              </S.InfoTitleBoxContainer>
+
               <S.MajorFieldContainer>
                 <S.MajorFieldTitle>Software Core</S.MajorFieldTitle>
                 <S.MajorFieldDetail>

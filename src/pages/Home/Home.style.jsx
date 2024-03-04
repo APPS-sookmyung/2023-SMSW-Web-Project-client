@@ -96,13 +96,14 @@ export const IntroMajorName = styled.h3`
 `;
 
 export const MajorFieldSection = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 50%;
   background-color: #fafafa;
+  align-items: center;
 `;
 
 export const HomeInfoTitleContainer = styled.div`
-  width: 100%;
+  width: 100vw;
 `;
 
 export const HomeInfoTitleInner = styled.div`
@@ -119,7 +120,6 @@ export const MajorFieldSectionInner = styled.div`
   justify-content: flex-start;
   height: auto;
   width: 100vw;
-  margin: 40px;
 `;
 
 export const HomeInfoTitle = styled.h3`
@@ -140,6 +140,7 @@ export const MajorField = styled.div`
   width: 100%;
   align-items: center;
   justify-content: center;
+  position: relative;
 `;
 
 export const MajorFieldContainer = styled.div`
@@ -198,4 +199,10 @@ export const linksName = styled.h3`
   color: black;
   font-size: 1.1rem;
   font-weight: 700;
+`;
+
+export const InfoTitleBoxContainer = styled.div`
+  position: absolute;
+  left: 40px;
+  top: 40px;
 `;

@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 
 export const HomeInfoTitleContainer = styled.div`
-  width: 100%;
+  width: auto;
+  height: auto;
 `;
 
 export const HomeInfoTitleInner = styled.div`
