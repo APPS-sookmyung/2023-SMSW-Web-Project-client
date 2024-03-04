@@ -97,7 +97,7 @@ export const IntroMajorName = styled.h3`
 
 export const MajorFieldSection = styled.div`
   width: 100%;
-  height: 50%;
+  height: 90%;
   background-color: #fafafa;
   align-items: center;
 `;
@@ -118,7 +118,6 @@ export const HomeInfoTitleInner = styled.div`
 export const MajorFieldSectionInner = styled.div`
   align-items: center;
   justify-content: flex-start;
-  height: auto;
   width: 100%;
 `;
 
@@ -149,9 +148,9 @@ export const MajorFieldContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 300px;
-  height: 150px;
-  padding: 2vw;
-  margin: 1vw;
+  height: 250px;
+  padding: 10px;
+  margin: 10px 30px;
 `;
 
 export const MajorFieldTitle = styled.h2`
