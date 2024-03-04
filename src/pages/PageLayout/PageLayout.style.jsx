@@ -5,4 +5,5 @@ export const Layout = styled.div`
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
+  width: 100vw;
 `;
