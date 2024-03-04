@@ -1,5 +1,5 @@
 import "./App.css";
-import { React } from "react";
+import { React, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Curriculum from "./pages/Curriculum/Curriculum";
@@ -13,6 +13,12 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  useEffect(() => {
+    window.onbeforeunload = function pushRefresh() {
+      window.scrollTo(0, 0);
+    };
+  }, []);
+
   return (
     <PageLayout header={<Header />} footer={<Footer />}>
       <Routes>
