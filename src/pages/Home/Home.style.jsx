@@ -183,21 +183,28 @@ export const linksContaineColumn = styled.div`
 `;
 
 export const linksBox = styled.a`
-  width: 17vw;
-  height: 8vh;
-  margin: 5px;
+  width: 210px;
+  height: 80px;
+  margin: 10px;
 
   text-align: center;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
   text-decoration: none;
 
   background-color: #ffffffb5;
-  border-radius: 10px;
+  border-radius: 14px;
 `;
 
 export const linksName = styled.h3`
   color: black;
-  font-size: 1.1rem;
+  font-size: 21px;
   font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 `;
 
 export const InfoTitleBoxContainer = styled.div`

@@ -330,7 +330,7 @@ export const MapImgInner = styled.div`
 `;
 
 export const MapImg = styled.div`
-  background-image: url("/images/CampusMap.jpeg");
+  background-image: url("/images/CampusMap2.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
