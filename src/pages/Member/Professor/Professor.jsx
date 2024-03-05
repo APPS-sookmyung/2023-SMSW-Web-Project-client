@@ -79,7 +79,7 @@ const Professor = () => {
     <S.ProfessorPart>
       <div style={{ display: "flex" }}>
         <div>
-          {ProfessorList.slice(0, 9).map((professorList) => (
+          {ProfessorList.slice(0, 10).map((professorList) => (
             <ViewProfessorList
               professorList={professorList}
               key={professorList.name}
@@ -87,7 +87,7 @@ const Professor = () => {
           ))}
         </div>
         <div>
-          {ProfessorList.slice(9, 17).map((professorList) => (
+          {ProfessorList.slice(10, 19).map((professorList) => (
             <ViewProfessorList
               professorList={professorList}
               key={professorList.name}

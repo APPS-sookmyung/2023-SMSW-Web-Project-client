@@ -62,7 +62,7 @@ export const ProfessorDetailOneColumn = styled.div`
   flex-direction: column;
   margin: 5px;
   font-size: 15px;
-  width: 15rem;
+  width: 300px;
 `;
 
 export const ProfessorDetail = styled.div`
