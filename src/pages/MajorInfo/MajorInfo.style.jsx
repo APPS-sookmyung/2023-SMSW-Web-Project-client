@@ -330,7 +330,7 @@ export const MapImgInner = styled.div`
 `;
 
 export const MapImg = styled.div`
-  background-image: url("/images/CampusMap2.jpeg");
+  background-image: url("https://github.com/APPS-sookmyung/2023-SMSW-Web-Project-client/blob/main/public/images/campusMap.jpeg?raw=true");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
