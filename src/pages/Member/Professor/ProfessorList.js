@@ -1,19 +1,6 @@
 export const ProfessorList = [
   {
-    id: 1,
-
-    name: "이광수",
-    Position: "교수",
-    Phone: "02)710-9429",
-    Email: "rhee@sm.ac.kr",
-    Website: "http://cs.sookmyung.ac.kr/~rhee/",
-    Field: "정보 보호",
-    Location: "새힘관 103호",
-    Image:
-      "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773458761100.jpg",
-  },
-  {
-    id: 2,
+    id: 0,
 
     name: "김주균",
     Position: "교수",
@@ -26,7 +13,7 @@ export const ProfessorList = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773477598100.jpg",
   },
   {
-    id: 3,
+    id: 1,
 
     name: "최종원",
     Position: "교수",
@@ -40,7 +27,7 @@ export const ProfessorList = [
   },
 
   {
-    id: 4,
+    id: 2,
 
     name: "창병모",
     Position: "교수",
@@ -54,7 +41,7 @@ export const ProfessorList = [
   },
 
   {
-    id: 5,
+    id: 3,
 
     name: "최영우",
     Position: "교수",
@@ -67,7 +54,7 @@ export const ProfessorList = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773549545100.jpg",
   },
   {
-    id: 6,
+    id: 4,
 
     name: "심준호",
     Position: "교수",
@@ -81,7 +68,7 @@ export const ProfessorList = [
   },
 
   {
-    id: 7,
+    id: 5,
 
     name: "김윤희",
     Position: "교수",
@@ -94,7 +81,7 @@ export const ProfessorList = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773578243100.jpg",
   },
   {
-    id: 8,
+    id: 6,
 
     name: "유석종",
     Position: "교수",
@@ -108,7 +95,7 @@ export const ProfessorList = [
   },
 
   {
-    id: 9,
+    id: 7,
 
     name: "이기용",
     Position: "교수",
@@ -122,7 +109,7 @@ export const ProfessorList = [
   },
 
   {
-    id: 10,
+    id: 8,
 
     name: "김윤진",
     Position: "교수",
@@ -135,7 +122,7 @@ export const ProfessorList = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773621487100.jpg",
   },
   {
-    id: 11,
+    id: 9,
 
     name: "박영훈",
     Position: "교수",
@@ -148,7 +135,7 @@ export const ProfessorList = [
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773634870100.jpg",
   },
   {
-    id: 12,
+    id: 10,
 
     name: "채희준",
     Position: "교수",
@@ -162,7 +149,7 @@ export const ProfessorList = [
   },
 
   {
-    id: 13,
+    id: 11,
 
     name: "정영주",
     Position: "교수",
@@ -173,6 +160,32 @@ export const ProfessorList = [
     Location: "새힘관 505",
     Image:
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773658587100.jpg",
+  },
+  {
+    id: 12,
+
+    name: "홍기범",
+    Position: "교수",
+    Phone: "02)710-9398",
+    Email: "kb.hong@sookmyung.ac.kr",
+    Website: "https://sites.google.com/sookmyung.ac.kr/aiv-lab-smwu",
+    Field: "컴퓨터 비전 및 패턴인식 딥러닝 / 생성형 AI / Domain Generalization",
+    Location: "새힘관 405",
+    Image:
+      "https://ds.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1709173147038100.jpg",
+  },
+  {
+    id: 13,
+
+    name: "박수현",
+    Position: "교수",
+    Phone: "02)2077-7959",
+    Email: "soohyun.park@sookmyung.ac.kr",
+    Website: "https://sites.google.com/view/dpslab-smwu/home",
+    Field: "고급 인공지능, 지능형자율제어, 분산시스템",
+    Location: "새힘관 413",
+    Image:
+      "https://ds.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1709173239463100.jpg",
   },
   {
     id: 14,
@@ -227,5 +240,18 @@ export const ProfessorList = [
     Location: "-",
     Image:
       "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773398321100.jpg",
+  },
+  {
+    id: 18,
+
+    name: "이광수",
+    Position: "명예교수",
+    Phone: "02)710-9429",
+    Email: "rhee@sm.ac.kr",
+    Website: "http://cs.sookmyung.ac.kr/~rhee/",
+    Field: "정보 보호",
+    Location: "-",
+    Image:
+      "https://software.sookmyung.ac.kr/sites/software/atchmnfl/profl/28/temp_1556773458761100.jpg",
   },
 ];
