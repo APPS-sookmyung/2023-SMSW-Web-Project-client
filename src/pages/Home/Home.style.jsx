@@ -186,11 +186,11 @@ export const linksBox = styled.a`
   width: 210px;
   height: 80px;
   margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   text-align: center;
-  align-items: center;
-  align-self: center;
-  justify-content: center;
   text-decoration: none;
 
   background-color: #ffffffb5;
@@ -201,10 +201,6 @@ export const linksName = styled.h3`
   color: black;
   font-size: 21px;
   font-weight: 700;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
 `;
 
 export const InfoTitleBoxContainer = styled.div`
